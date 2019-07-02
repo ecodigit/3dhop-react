@@ -1,4 +1,4 @@
-#3DHOP per il Progetto Ecodigit
+# 3DHOP per il Progetto Ecodigit
 
 Visualizzatore di modelli 3D basato su [3DHOP](http://vcg.isti.cnr.it/3dhop/) dell'[ISTI-CNR](https://www.isti.cnr.it/).
 
