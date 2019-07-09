@@ -1,0 +1,29 @@
+functions:
+  - fullscreen:
+    active: True
+    name: fullscreenSwitch()
+    values: None
+    bindFunc: None
+  - lighting:
+    active: True
+    name: lightingSwitch()
+    values: None
+    bindFunc: None
+  - measure:
+    active: False
+    name: measureSwitch()
+    values: None
+    bindFunc: 
+      - endMeasure:
+        name: onEndMeasure()
+        values: uOmeasurement
+  - pointPicking:
+    active: False
+    name: pickpointingSwitch()
+    values: None
+    bindFunc: None
+  - sections:
+    active: False
+    name: sectiontoolSwitch()
+    values: None
+    bindFunc: None
