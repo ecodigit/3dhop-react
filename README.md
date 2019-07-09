@@ -6,7 +6,7 @@ Questa versione si propone di automatizzare la generazione della pagina a partir
 
 ## Prima mappatura 
 Una prima mappatura organizzata si trova nei file:
-* 3DobjDescription.yml: vi sono raccolte le caratteristiche descritte da:
+* 3DobjDescription.yml: vi sono raccolte le caratteristiche degli oggetti 3D descritte da:
     * nome
     * tipologia dato
     * possibili valori
