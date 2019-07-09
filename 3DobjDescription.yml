@@ -21,4 +21,9 @@ uOmeasurement:
     - cm
     - m
     - km
+singleModel:
+  type: boolean
+  values:
+    - True
+    - False
 
