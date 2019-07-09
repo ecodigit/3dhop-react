@@ -5,7 +5,7 @@ Visualizzatore di modelli 3D basato su [3DHOP](http://vcg.isti.cnr.it/3dhop/) de
 Questa versione si propone di automatizzare la generazione della pagina a partire dalle caratteristiche del modello da visualizzare e dalle specifiche esigenze di visualizzazione dell'utente. In particolare costruisce la pagina di visualizzazione richiamando le funzioni necessarie agli strumenti richiesti, passando a queste le opportune variabili.
 
 ## Prima mappatura 
-Una prima mappatura organizzata si trova nei file:
+Una prima mappatura organizzata si trova nei file<sup>1</sup>:
 * 3DobjDescription.yml: vi sono raccolte le caratteristiche degli oggetti 3D descritte da:
     * nome
     * tipologia dato
@@ -19,3 +19,6 @@ Una prima mappatura organizzata si trova nei file:
         * eventuali valori da passare (presi da file descrittore oggetti 3D)
 
 Questa prima mappatura si riferisce alle funzioni presenti in questa prima fase relativa ad una configurazione minimale del visualizzatore. Non viene ad esempio contemplata la possibilità di lavorare con più modelli o l'attivazione di aree (*features*).
+
+
+<sup>1</sup>: ho usato il formato yaml per facilitarne la lettura. Probabilmente quando dovranno diventare una versione finale, per coerenza con il resto dell'architettura, si dovranno convertire in xml.
