@@ -1,0 +1,24 @@
+Zoriented:
+  type: boolean
+  values:
+    - True
+    - False
+initialView:
+  type: string
+  values:
+    - Top
+    - Front
+    - Perspective
+scaled:
+  type: boolean
+  values:
+    - True
+    - False
+uOmeasurement:
+  type: string
+  values:
+    - mm
+    - cm
+    - m
+    - km
+
