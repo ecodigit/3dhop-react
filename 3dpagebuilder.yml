@@ -1,0 +1,16 @@
+Zoriented:
+  - True
+  - False
+initialView:
+  - Top
+  - Front
+  - Perspective
+scaled:
+  - True
+  - False
+uOmeasurement:
+  - mm
+  - cm
+  - m
+  - km
+
