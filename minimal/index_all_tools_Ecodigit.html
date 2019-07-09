@@ -116,7 +116,8 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/gargo.nxz" }
+			"mesh_1" : { url: "models/2_rid_15k_texture.nxz" },
+			"spot" : { url: "models/sfera.ply" }
 		},
 		modelInstances : {
 			"model_1" : { 
@@ -124,6 +125,26 @@ function setup3dhop() {
 				color : [0.8, 0.7, 0.75]
 			}
 		},
+
+		spots : {
+            "spot" : {
+                 mesh : "spot",
+                 transform : { 
+                     matrix: SglMat4.mul(SglMat4.translation([ 0, 0, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0])) 
+                    },
+                    color : [0.0, 0.25, 1.0],
+					alpha : 0.5
+                }
+		},
+
+		// sartPhi è la rotazione sull'asse y positiva in senso orario
+            //startTheta è la rotazione sull'asse x positiva in senso orario 
+			// per avere una vista di pianta sartPhi=0 startTheta=0
+			// per avere una vista di prospetto sartPhi=0 startTheta=0
+            // distance dal centro 
+
+
+
 		trackball: {
 			type : TurntablePanTrackball,
 			trackOptions : {
