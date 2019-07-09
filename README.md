@@ -12,7 +12,7 @@ Una prima mappatura organizzata si trova nei file:
     * possibili valori
 * functionsMap.yaml: vi sono raccolte le funzioni implementabili nella pagina del visualizzatore. Le funzioni sono descritte da:
     * un nome
-    * una variabile boolena per indicare se la funzione è attiva di oppure no. Ci saranno alcune attive di default altre da attivare se selezionate.
+    * una variabile boolena per indicare se la funzione è attiva oppure no. (Ce saranno alcune attive di default, altre da attivare quando selezionate).
     * eventuali valori da passare alla funzione (presi da file descrittore oggetti 3D)
     * eventuali funzioni che vengono chiamate dalla principale con:
         * nome
