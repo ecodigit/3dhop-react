@@ -6,11 +6,14 @@ Questa versione si propone di automatizzare la generazione della pagina a partir
 
 ## Prima mappatura 
 Una prima mappatura organizzata si trova nei file:
-* 3DobjDescription.yml: vi sono raccolte le caratteristiche per nome, tipologia di dato e possibili valori
-* functionsMap.yaml: vi sono raccolte le funzioni implementabili nella pagina del visualizzatore. Le funzioni sono descritte da:
- * un nome
- * una variabile boolena per indicare se la funzione è attiva di oppure no. Ci saranno alcune attive di default altre da attivare se selezionate.
- * eventuali valori da passare alla funzione (presi da file descrittore oggetti 3D)
- * eventuali funzioni che vengono chiamate dalla principale con:
+* 3DobjDescription.yml: vi sono raccolte le caratteristiche descritte da:
     * nome
-    * eventuali valori da passare (presi da file descrittore oggetti 3D)
+    * tipologia dato
+    * possibili valori
+* functionsMap.yaml: vi sono raccolte le funzioni implementabili nella pagina del visualizzatore. Le funzioni sono descritte da:
+    * un nome
+    * una variabile boolena per indicare se la funzione è attiva di oppure no. Ci saranno alcune attive di default altre da attivare se selezionate.
+    * eventuali valori da passare alla funzione (presi da file descrittore oggetti 3D)
+    * eventuali funzioni che vengono chiamate dalla principale con:
+        * nome
+        * eventuali valori da passare (presi da file descrittore oggetti 3D)
