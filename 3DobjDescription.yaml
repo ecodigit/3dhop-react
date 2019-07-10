@@ -18,7 +18,6 @@ uOmeasurement:
   type: string
   values:
     - mm
-    - cm
     - m
     - km
 singleModel:
