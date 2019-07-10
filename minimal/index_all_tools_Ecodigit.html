@@ -21,6 +21,9 @@
 <script type="text/javascript" src="js/trackball_sphere.js"></script>
 <!--UTILITY-->
 <script type="text/javascript" src="js/init.js"></script>
+<!--DB  sacc1 è il js che contiene i dati collegati agli SPOTS -->
+<script type="text/javascript" src="js/db.js"></script>
+
 </head>
 <body>
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
@@ -112,11 +115,11 @@
 var presenter = null;
 
 function setup3dhop() {
-	presenter = new Presenter("draw-canvas"); // test sviluppo 16:50
+	presenter = new Presenter("draw-canvas"); 
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/2_rid_15k_texture.nxz" },
+			"mesh_1" : { url: "models/2_orientato.nxz" },
 			"spot" : { url: "models/sfera.ply" }
 		},
 		modelInstances : {
@@ -132,27 +135,35 @@ function setup3dhop() {
                  transform : { 
                      matrix: SglMat4.mul(SglMat4.translation([ 0, 0, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0])) 
                     },
+                    color : [1, 0.5, 0.5],
+					alpha : 0.5
+                },
+				"spot1" : {
+                 mesh : "spot",
+                 transform : { 
+                     matrix: SglMat4.mul(SglMat4.translation([ 3, 4, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0])) 
+                    },
                     color : [0.0, 0.25, 1.0],
 					alpha : 0.5
                 }
 		},
 
 		// sartPhi è la rotazione sull'asse y positiva in senso orario
-            //startTheta è la rotazione sull'asse x positiva in senso orario 
-			// per avere una vista di pianta sartPhi=0 startTheta=0
-			// per avere una vista di prospetto sartPhi=0 startTheta=0
-            // distance dal centro 
+        //startTheta è la rotazione sull'asse x positiva in senso orario 
+		// per avere una vista di pianta sartPhi=0 startTheta=90
+		// per avere una vista di prospetto sartPhi=0 startTheta=0
+           
 
 
 
 		trackball: {
 			type : TurntablePanTrackball,
 			trackOptions : {
-				startPhi: 35.0,
-				startTheta: 15.0,
+				startPhi: 0.0,
+				startTheta: 0.0,
 				startDistance: 2.5,
 				minMaxPhi: [-180, 180],
-				minMaxTheta: [-30.0, 70.0],
+				minMaxTheta: [-180.0, 180.0],
 				minMaxDist: [0.5, 3.0]
 			}
 		}
@@ -169,6 +180,12 @@ function setup3dhop() {
 //--SECTIONS--
 	sectiontoolInit();
 //--SECTIONS--
+
+//--SPOT VISIBILITY sacc1 -- 
+// per spot inizialmente spenti (HOP_ALL, false, true)
+// per spot inizialmente accesi (HOP_ALL, true, true) ma non mi fa cliccare sopra!!
+presenter.setSpotVisibility(HOP_ALL, false, true);
+//--SPOT VISIBILITY sacc1 --
 }
 
 function actionsToolbar(action) {
@@ -201,6 +218,10 @@ function actionsToolbar(action) {
 //--SECTIONS--
 	else if(action=='sections' || action=='sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
 //--SECTIONS--
+//--HOTSPOT sacc1--
+	else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
+//--HOTSPOT sacc1--
+
 }
 
 //--MEASURE--
@@ -220,6 +241,10 @@ function onEndPick(point) {
     $('#pickpoint-output').html("[ "+x+" , "+y+" , "+z+" ]");
 } 
 //--PICKPOINT--	
+
+//--HOTSPOT sacc1--
+
+//--HOTSPOT sacc1--
 
 $(document).ready(function(){
 	init3dhop();
