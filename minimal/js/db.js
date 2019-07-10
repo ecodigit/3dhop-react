@@ -1,5 +1,7 @@
 JSON
-// js che contiene i dati collegati agli spots
+// js che contiene i dati collegati agli spots, non sono sicuro che le informazioni 
+// transform color e alpha siano indispensabili, probabilmente sono già presenti in
+// index
 
 var db2 = {
 	"spot" : {
