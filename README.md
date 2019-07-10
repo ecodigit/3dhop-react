@@ -6,7 +6,7 @@ Questa versione si propone di automatizzare la generazione della pagina a partir
 
 ## Prima mappatura 
 Una prima mappatura organizzata si trova nei file<sup>1</sup>:
-* 3DobjDescription.yml: vi sono raccolte le caratteristiche degli oggetti 3D descritte da:
+* 3DobjDescription.yaml: vi sono raccolte le caratteristiche degli oggetti 3D descritte da:
     * nome
     * tipologia dato
     * possibili valori
@@ -21,4 +21,4 @@ Una prima mappatura organizzata si trova nei file<sup>1</sup>:
 Questa prima mappatura si riferisce alle funzioni presenti in questa prima fase relativa ad una configurazione minimale del visualizzatore. Non viene ad esempio contemplata la possibilità di lavorare con più modelli o l'attivazione di aree (*features*).
 
 
-<sup>1</sup>: ho usato il formato yaml per facilitarne la lettura. Probabilmente quando dovranno diventare una versione finale, per coerenza con il resto dell'architettura, si dovranno convertire in xml.
+<sup>1</sup>: ho usato il formato YAML per facilitarne la lettura. Probabilmente quando dovranno diventare una versione finale, per coerenza con il resto dell'architettura, si dovranno convertire in xml.
