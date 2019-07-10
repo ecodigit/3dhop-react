@@ -4,9 +4,34 @@ functions:
     name: fullscreenSwitch()
     values: None
     bindFunc: None
+  - zoomIn:
+    active: True
+    name: zoomIn()
+    values: None
+    bindFunc: None
+  - zoomOut:
+    active: True
+    name: zoomOut()
+    values: None
+    bindFunc: None
   - lighting:
     active: True
     name: lightingSwitch()
+    values: None
+    bindFunc: None
+  - light:
+    active: True
+    name: lightSwitch()
+    values: None
+    bindFunc: None
+  - camera:
+    active: True
+    name: cameraSwitch()
+    values: None
+    bindFunc: None
+  - color:
+    active: True
+    name: colorSwitch()
     values: None
     bindFunc: None
   - measure:

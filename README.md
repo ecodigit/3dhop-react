@@ -6,12 +6,12 @@ Questa versione si propone di automatizzare la generazione della pagina a partir
 
 ## Prima mappatura 
 Una prima mappatura organizzata si trova nei file<sup>1</sup>:
-* 3DobjDescription.yml: vi sono raccolte le caratteristiche degli oggetti 3D descritte da:
+* 3DobjDescription.yaml: vi sono raccolte le caratteristiche degli oggetti 3D descritte da:
     * nome
     * tipologia dato
     * possibili valori
 * functionsMap.yaml: vi sono raccolte le funzioni implementabili nella pagina del visualizzatore. Le funzioni sono descritte da:
-    * un nome
+    * nome della funzione js
     * una variabile boolena per indicare se la funzione è attiva oppure no. (Ce ne saranno alcune attive di default, altre da attivare quando selezionate).
     * eventuali valori da passare alla funzione (presi da file descrittore oggetti 3D)
     * eventuali funzioni che vengono chiamate dalla principale con:
@@ -21,4 +21,4 @@ Una prima mappatura organizzata si trova nei file<sup>1</sup>:
 Questa prima mappatura si riferisce alle funzioni presenti in questa prima fase relativa ad una configurazione minimale del visualizzatore. Non viene ad esempio contemplata la possibilità di lavorare con più modelli o l'attivazione di aree (*features*).
 
 
-<sup>1</sup>: ho usato il formato yaml per facilitarne la lettura. Probabilmente quando dovranno diventare una versione finale, per coerenza con il resto dell'architettura, si dovranno convertire in xml.
+<sup>1</sup>: ho usato il formato YAML per facilitarne la lettura. Probabilmente quando dovranno diventare una versione finale, per coerenza con il resto dell'architettura, si dovranno convertire in xml.
