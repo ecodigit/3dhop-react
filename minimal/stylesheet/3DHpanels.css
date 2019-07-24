@@ -20,7 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*HELP PANEL*/
 #cover{	display:none; position:fixed; z-index:20; width:100%; height:100%; top:0; left:0; padding-bottom:20px; background-color:rgba(50, 50, 50, 0.5); }
 
-.panel { display:none; 
+.panel { 
+    display:none; 
     width:550px; 
     font-size:80%; 
     font-family:verdana; 
