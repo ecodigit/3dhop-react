@@ -5,6 +5,7 @@
 <title>3DHOP - 3D Heritage Online Presenter</title>
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
+<link type="text/css" rel="stylesheet" href="stylesheet/3DHpanels.css"/>
 <!--SPIDERGL-->
 <script type="text/javascript" src="js/spidergl.js"></script>
 <!--JQUERY-->
@@ -21,9 +22,9 @@
 <script type="text/javascript" src="js/trackball_sphere.js"></script>
 <!--UTILITY-->
 <script type="text/javascript" src="js/init.js"></script>
-<!--DB  sacc1 è il js che contiene i dati collegati agli SPOTS -->
+<!--DB  sacc1 è il js che contiene i dati collegati agli SPOTS  ma ancora non è usato.. -->
 <script type="text/javascript" src="js/db.js"></script>
-
+<script type="text/javascript" src="js/panels.js"></script>
 </head>
 <body>
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
@@ -36,8 +37,8 @@
   <img id="zoomout"     title="Zoom Out"               src="skins/dark/zoomout.png"/><br/>
 <!--ZOOM-->
 <!--HOTSPOT sacc1-->
-    <img id="hotspot"      title="Hide Hotspots"                src="skins/dark/pin_on.png" style="position:absolute; visibility:hidden;"/>
-    <img id="hotspot_on"     title="Show Hotspots"               src="skins/dark/pin.png"/><br/>
+    <img id="hotspot"      title="Hide Hotspots"                src="skins/dark/pin.png" style="position:absolute; visibility:hidden;"/>
+	<img id="hotspot_on"     title="Show Hotspots"               src="skins/dark/pin_on.png"/><br/>
 <!--HOTSPOT-->
 <!--LIGHTING-->
   <img id="lighting_off" title="Enable Lighting"       src="skins/dark/lighting_off.png" style="position:absolute; visibility:hidden;"/>
@@ -107,8 +108,11 @@
  </div>
 <!--SECTIONS-->
 
- <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/light.jpg)"/>
+<div>
+ <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/light.jpg)">
+
 </div>
+
 </body>
 
 <script type="text/javascript">
@@ -138,7 +142,7 @@ function setup3dhop() {
                     color : [1, 0.5, 0.5],
 					alpha : 0.5
                 },
-				"spot1" : {
+			"spot1" : {
                  mesh : "spot",
                  transform : { 
                      matrix: SglMat4.mul(SglMat4.translation([ 3, 4, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0])) 
@@ -183,8 +187,11 @@ function setup3dhop() {
 
 //--SPOT VISIBILITY sacc1 -- 
 // per spot inizialmente spenti (HOP_ALL, false, true)
-// per spot inizialmente accesi (HOP_ALL, true, true) ma non mi fa cliccare sopra!!
+// per spot inizialmente accesi (HOP_ALL, true, true) ma non cambia puntatore del mouse quando vado sopra!!
 presenter.setSpotVisibility(HOP_ALL, false, true);
+//  tell 3DHOP what to do when an instance is clicked.
+presenter._onPickedSpot = onPickedSpot;
+
 //--SPOT VISIBILITY sacc1 --
 }
 
@@ -225,10 +232,12 @@ function actionsToolbar(action) {
 }
 
 //--MEASURE--
+// measure sacc1 al momento l'unità di misura è scritta qui sull'html ma nella versione definitiva deve essere una
+// variabile che viene fissata quando carico il modello e compilo il form
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$('#measure-output').html(measure.toFixed(2) + "mm"); 
+	$('#measure-output').html(measure.toFixed(2) + "m"); 
 }
 //--MEASURE--
 
@@ -242,9 +251,62 @@ function onEndPick(point) {
 } 
 //--PICKPOINT--	
 
-//--HOTSPOT sacc1--
+//--SPOT FUNCTION sacc1--
 
-//--HOTSPOT sacc1--
+// in caso di click su spot attiva la funzione setInfo definita sotto e gli passa il nome dello spot
+function onPickedSpot(id) {
+  switch(id) {
+     case 'spot' :  setInfo(id); break;
+     case 'spot1'  :  setInfo(id); break;
+  }
+}
+// funzione setInfo in funzione del nome dello spot attiva funzione PopupCenter e apre nuova finestra
+function setInfo(hotspot){
+	var txt;
+
+	switch (hotspot){
+		case "spot":
+			// alert("The Young Pharaoh spot");	
+			PopupCenter('http://riltec.uniroma3.it/?lang=it','riltec','400','400');  
+			break;
+			
+		case "spot1":
+			PopupCenter('http://riltec.uniroma3.it/index.php/strumentazioni-e-attrezzature/','strumenti','400','400');
+		
+			  	break;
+		
+
+	}
+}
+
+//--SPOT  sacc1--
+
+//-- function popup center per aprire finestra popup al centro pagina --
+
+function PopupCenter(url, title, w, h) {  
+    // Fixes dual-screen position                         Most browsers      Firefox  
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;  
+              
+    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;  
+    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;  
+              
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;  
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;  
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);  
+  
+    // Puts focus on the newWindow  
+    if (window.focus) {  
+        newWindow.focus();  
+    }  
+}
+
+
+
+//-- function popup center per aprire finestra popup al centro pagina --
+
+
+
 
 $(document).ready(function(){
 	init3dhop();
