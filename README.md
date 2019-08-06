@@ -18,7 +18,7 @@ Una prima mappatura organizzata si trova nei file<sup>1</sup>:
         * nome
         * eventuali valori da passare (presi da file descrittore oggetti 3D)
 
-Questa prima mappatura si riferisce alle funzioni presenti in questa prima fase relativa ad una configurazione minimale del visualizzatore. Non viene ad esempio contemplata la possibilità di lavorare con più modelli o l'attivazione di aree (*features*).
+Questa prima mappatura si riferisce alle funzioni presenti in questa prima fase relativa ad una configurazione minimale del visualizzatore. Non viene ad esempio contemplata la possibilità di lavorare con più modelli o l'attivazione di aree (*hotspot*).
 
 
 <sup>1</sup>: ho usato il formato YAML per facilitarne la lettura. Probabilmente quando dovranno diventare una versione finale, per coerenza con il resto dell'architettura, si dovranno convertire in xml.
