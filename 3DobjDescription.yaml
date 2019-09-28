@@ -31,5 +31,5 @@ bindedModel:
     - True
     - False
 NbindMod:
-  type: number
+  type: integer
   values: {0:100}
