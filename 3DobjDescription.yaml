@@ -25,4 +25,11 @@ singleModel:
   values:
     - True
     - False
-
+bindedModel:
+  type: boolean
+  values:
+    - True
+    - False
+NbindMod:
+  type: integer
+  values: {0:100}

@@ -1,0 +1,19 @@
+{
+  "name": "3dhop-react",
+  "version": "1.0.0",
+  "description": "Package exposing the 3DHOP 3D visualization library as a react component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecodigit/3dhop-react.git"
+  },
+  "author": "ECODIGIT (http://ecodigit.dtclazio.it/)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ecodigit/3dhop-react/issues"
+  },
+  "homepage": "https://github.com/ecodigit/3dhop-react#readme"
+}
