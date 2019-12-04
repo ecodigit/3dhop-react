@@ -89,7 +89,22 @@ function getUrlVars() {
 return vars;
 }
 
-function setup3dhop() { 
+function setup3dhop() {
+        var unitmeas = getUrlVars()["um"];
+        switch (unitmeas) {
+                case 0:
+                        unitmeas = 'mm';
+                        break;
+                case 1:
+                        unitmeas = 'cm';
+                        break;
+                case 2:
+                        unitmeas = 'm';
+                        break;
+                case 3:
+                        unitmeas = 'km';
+                        break;
+        } 
         var phi = getUrlVars()["phi"];
         var theta = getUrlVars()["theta"];
 	var model = getUrlVars()["mod"];
@@ -136,7 +151,7 @@ function actionsToolbar(action) {
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$('#measure-output').html(measure.toFixed(2) + " cm");
+	$('#measure-output').html(measure.toFixed(2) + " "+unitmeas);
 }
 
 $(document).ready(function(){
