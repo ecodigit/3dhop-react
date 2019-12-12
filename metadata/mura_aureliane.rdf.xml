@@ -20,6 +20,7 @@
 	xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
 	xmlns:MU="https://w3id.org/italia/onto/MU/"
 	xmlns:l0="https://w3id.org/italia/onto/l0/"
+	xmlns:skos="http://www.w3.org/2008/05/skos#"
 	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
 
 	<!-- Istruzioni -->
@@ -29,7 +30,7 @@
 	<!-- Inserire un ID univoco -->
 
 	<rdf:Description
-		rdf:about="https://w3id.org/ecodigit/object/mura_aureliane">
+		rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina">
 
 		<rdf:type>
 			<rdf:Description
@@ -46,7 +47,11 @@
 		</rdf:type>
 
 		<!-- Inserire identificativo univoco del modello -->
-		<dc:identifier><![CDATA[${idModello}]]></dc:identifier>
+		<!-- <dc:identifier><![CDATA[${idModello}]]></dc:identifier> -->
+
+		<!-- DA MAIL nome (o comunque uri) del file del modello -->
+		<!-- Inserire nome del modello -->
+		<dc:title><![CDATA[Porta Latina]]></dc:title>
 
 		<!-- (Se disponibile) Inserire una descrizione del modello in lingua inglese -->
 		<dc:description xml:lang="en"><![CDATA[${descrizioneEn}]]></dc:description>
@@ -55,25 +60,41 @@
 		<dc:description xml:lang="it"><![CDATA[${descrizioneIt}]]></dc:description>
 
 		<!-- Inserire anno di creazione del modello -->
-		<dc:date>${anno}</dc:date>
+		<dc:date>2019</dc:date>
 
 		<!-- Inserire lista di autori in formato stringa -->
 		<!-- DA MAIL: nome di chi ha sviluppato il modello -->
 		<dc:creator><![CDATA[${stringaAutori}]]></dc:creator>
+
 		<!-- Possibilmente fornire gli autori in forma strutturata com segue per 
 			migliorare la possibilità di fare alcune interrogazioni (e.g. dammi tutti 
 			i modelli di un certo autore). -->
 		<!-- Per fare questo, per ogni autore replicare il seguente blocco <frbr:creator></frbr:creator> -->
 		<frbr:creator>
 			<foaf:Person
-				rdf:about="https://w3id.org/ecodigit/person/${nomeAutore}.${cognomeAutore}">
-				<foaf:name>${nomeAutore} ${cognomeAutore}</foaf:name>
+				rdf:about="https://w3id.org/ecodigit/person/luigi.asprino">
+				<foaf:name>Luigi Asprino</foaf:name>
 				<!-- Eventualmente fornire anche l'informazione riguardo all'organizzazione 
 					a cui la persona appartiene -->
 				<org:memberOf>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
-						<foaf:name><![CDATA[${nomeOrganizzazione}]]></foaf:name>
+						rdf:about="https://w3id.org/ecodigit/organization/ISTC">
+						<foaf:name><![CDATA[Istituto di Scienze e Tecnologie della Cognizione]]></foaf:name>
+						<foaf:acronym>ISTC</foaf:acronym>
+					</org:Organization>
+				</org:memberOf>
+			</foaf:Person>
+		</frbr:creator>
+		<frbr:creator>
+			<foaf:Person
+				rdf:about="https://w3id.org/ecodigit/person/mauro.saccone">
+				<foaf:name>Mauro Saccone</foaf:name>
+				<!-- Eventualmente fornire anche l'informazione riguardo all'organizzazione 
+					a cui la persona appartiene -->
+				<org:memberOf>
+					<org:Organization
+						rdf:about="https://w3id.org/ecodigit/organization/rm3">
+						<foaf:name><![CDATA[Roma tre]]></foaf:name>
 						<foaf:acronym>${acronimoOrganizzazione}</foaf:acronym>
 					</org:Organization>
 				</org:memberOf>
@@ -84,6 +105,12 @@
 		<!-- Inserire evevntuali organizzazioni coinvolte nella realizzazione del 
 			modello. -->
 		<!-- Per aggiungere più organizzazini ricopiare il blocco <dc:contributor></dc:contributor> -->
+		<dc:contributor>
+			<org:Organization
+				rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
+				<foaf:name>${nomeOrganizzazione}</foaf:name>
+			</org:Organization>
+		</dc:contributor>
 		<dc:contributor>
 			<org:Organization
 				rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
@@ -104,6 +131,8 @@
 				<foaf:name>${nomeOrganizzazione}</foaf:name>
 			</org:Organization>
 		</dcterms:rightsHolder>
+
+
 		<!-- Nel caso in cui si voglia dire che una persona è proprietaria di un 
 			modello -->
 		<dcterms:rightsHolder>
@@ -123,6 +152,11 @@
 		</dcterms:rightsHolder>
 
 
+		<!-- Informazioni di Licenza -->
+		<dcterms:license
+			rdf:resource="${URL al documento descrittivo della licenza}" />
+
+
 		<!-- DA MAIL nome del progetto per il quale è stato prodotto il modello -->
 		<project:isOutcomeOfProject>
 			<project:PublicInvestmentProject
@@ -133,33 +167,22 @@
 		</project:isOutcomeOfProject>
 
 
-		<!-- DA MAIL nome (o comunque uri) del file del modello -->
-		<!-- Inserire nome del modello -->
-		<dc:title><![CDATA[${nomeModello}]]></dc:title>
 		<!-- qui mettere la URI del modello -->
+		<!-- dove sta fisicamente il file del modello 3d -->
 		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[${uriModello}]]></SM:URL>
 
-		<!-- DA MAIL modello scalato: indica se il modello è scalato oppure no. -->
-		<!-- true/false -->
-		<ve:isScaled>true</ve:isScaled>
+		<!-- Keyword -->
+		<prism:keyword xml:lang="${lingua keyword}"><![CDATA[${keyword testuale}]]></prism:keyword>
 
-		<!-- unità di misura: se il modello è scalato, indica l'unità di misura. -->
-		<!-- Sostituire unità di misura con cm/m/mm -->
-		<ve:hasScale>
-			<ve:Scale>
-				<MU:hasMeasurementUnit>
-					<MU:MeasurementUnit
-						rdf:about="https://w3id.org/ecodigit/resource/m">
-						<rdfs:label>m</rdfs:label>
-					</MU:MeasurementUnit>
-				</MU:hasMeasurementUnit>
-			</ve:Scale>
-		</ve:hasScale>
+		<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
+			3d -->
+		<dcterms:relation
+			rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
+		</dcterms:relation>
 
-		<!-- orientamento lungo asse Z: riguarda l'informazione relativa all'orientamento 
-			del modello. Questo perché ptrebbe essere disallineato. -->
-		<ve:isOrientedAlongZAxis>true
-		</ve:isOrientedAlongZAxis>
+		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology -->
+		<dcterms:subject rdf:resource="${uriCategoria}" />
+
 
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
 		<ve:containsSubModel>true</ve:containsSubModel>
@@ -174,6 +197,8 @@
 			</ve:SubModel>
 		</ve:hasSubModel>
 
+
+
 		<!-- contiene hotspot o features: "true" se ha features/hotspot, "false" 
 			altrimenti -->
 		<ve:containsHotspot>true</ve:containsHotspot>
@@ -186,11 +211,11 @@
 				<!-- identificativo -->
 				<ve:hotspotIdentifier>${identificcativoHotspot}
 				</ve:hotspotIdentifier>
-				<!-- tipo inserire uno tra: "Sphere", "Point" o "Parallelepiped" -->
+				<!-- tipo inserire uno tra: "Sphere", "Point", "Surface" -->
 				<rdf:type
 					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/${tipoHotspot}" />
 
-				<!-- element con cui è relezionato l'hotspot -->
+				<!-- element con cui è relezionato l'hotspot (con metadati) -->
 				<dc:relation>
 					<rdf:Description rdf:about="${uriElemento}">
 						<dc:title><![CDATA[${titoloElemento}]]></dc:title>
@@ -203,8 +228,45 @@
 						<!-- Eventualmente altri campi o anche altri tipi -->
 					</rdf:Description>
 				</dc:relation>
+
+				<!-- SOLO URL a oggetto in relazione con l'hotspot -->
+				<dcterms:relation
+					rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
+				</dcterms:relation>
+
 			</ve:Hotspot>
 		</ve:hasHotspot>
+
+
+		<!-- - Metadati relativi alla visutalizazione -->
+		<ve:hasVisualization>
+			<ve:Visualization
+				rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina/${id visualizzazione}">
+
+				<!-- DA MAIL modello scalato: indica se il modello è scalato oppure no. -->
+				<!-- true/false -->
+				<ve:isScaled>true</ve:isScaled>
+
+				<!-- unità di misura: se il modello è scalato, indica l'unità di misura. -->
+				<!-- Sostituire unità di misura con cm/m/mm -->
+				<ve:hasScale>
+					<ve:Scale>
+						<MU:hasMeasurementUnit>
+							<MU:MeasurementUnit
+								rdf:about="https://w3id.org/ecodigit/resource/m">
+								<rdfs:label>m</rdfs:label>
+							</MU:MeasurementUnit>
+						</MU:hasMeasurementUnit>
+					</ve:Scale>
+				</ve:hasScale>
+
+				<!-- orientamento lungo asse Z: riguarda l'informazione relativa all'orientamento 
+					del modello. Questo perché ptrebbe essere disallineato. -->
+				<ve:isOrientedAlongZAxis><![CDATA[true]]></ve:isOrientedAlongZAxis>
+
+			</ve:Visualization>
+		</ve:hasVisualization>
+
 
 	</rdf:Description>
 
