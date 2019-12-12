@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/ecodigit/3dhop-react/issues"
   },
-  "homepage": "https://github.com/ecodigit/3dhop-react#readme"
+  "homepage": "https://github.com/ecodigit/3dhop-react#readme",
+  "dependencies": {}
 }
