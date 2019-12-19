@@ -78,9 +78,9 @@
 					a cui la persona appartiene -->
 				<org:memberOf>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/rm3">
+						rdf:about="https://w3id.org/ecodigit/organization/DAR-RM3">
 						<foaf:name><![CDATA[Dipartimento di Architettura Università degli studi Roma Tre]]></foaf:name>
-						<foaf:acronym>RM3</foaf:acronym>
+						<foaf:acronym>DAR-RM3</foaf:acronym>
 					</org:Organization>
 				</org:memberOf>
 			</foaf:Person>
@@ -93,9 +93,9 @@
 					a cui la persona appartiene -->
 				<org:memberOf>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/rm3">
+						rdf:about="https://w3id.org/ecodigit/organization/DAR-RM3">
 						<foaf:name><![CDATA[Dipartimento di Architettura Università degli studi Roma Tre]]></foaf:name>
-						<foaf:acronym>RM3</foaf:acronym>
+						<foaf:acronym>DAR-RM3</foaf:acronym>
 					</org:Organization>
 				</org:memberOf>
 			</foaf:Person>
@@ -108,9 +108,9 @@
 					a cui la persona appartiene -->
 				<org:memberOf>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/rm3">
+						rdf:about="https://w3id.org/ecodigit/organization/DAR-RM3">
 						<foaf:name><![CDATA[Dipartimento di Architettura Università degli studi Roma Tre]]></foaf:name>
-						<foaf:acronym>RM3</foaf:acronym>
+						<foaf:acronym>DAR-RM3</foaf:acronym>
 					</org:Organization>
 				</org:memberOf>
 			</foaf:Person>
@@ -127,16 +127,11 @@
 		<!-- Per aggiungere più organizzazini ricopiare il blocco <dc:contributor></dc:contributor> -->
 		<dc:contributor>
 			<org:Organization
-				rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
-				<foaf:name>${nomeOrganizzazione}</foaf:name>
+				rdf:about="https://w3id.org/ecodigit/organization/SCBC">
+				<foaf:name>Sovrintendenza Capitolina ai Beni Culturali</foaf:name>
 			</org:Organization>
 		</dc:contributor>
-		<dc:contributor>
-			<org:Organization
-				rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
-				<foaf:name>${nomeOrganizzazione}</foaf:name>
-			</org:Organization>
-		</dc:contributor>
+		
 
 		<!-- Colui (persona o organizzazione) che detiene i diritti sul modello 
 			(proprietario) -->
@@ -147,21 +142,21 @@
 			di un modello -->
 		<dcterms:rightsHolder>
 			<org:Organization
-				rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
-				<foaf:name>${nomeOrganizzazione}</foaf:name>
+				rdf:about="https://w3id.org/ecodigit/organization/DAR-RM3">
+				<foaf:name>Dipartimento di Architettura Università degli studi Roma Tre</foaf:name>
 			</org:Organization>
 		</dcterms:rightsHolder>
 
 
 		<!-- Nel caso in cui si voglia dire che una persona è proprietaria di un 
 			modello -->
-		<dcterms:rightsHolder>
+		<!-- <dcterms:rightsHolder>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/${nomePersona}.${cognomePersona}">
-				<foaf:name>${nomePersona} ${cognomePersona}</foaf:name>
+				<foaf:name>${nomePersona} ${cognomePersona}</foaf:name> -->
 				<!-- Eventualmente fornire anche l'informazione riguardo all'organizzazione 
 					a cui la persona appartiene -->
-				<org:memberOf>
+				<!-- <org:memberOf>
 					<org:Organization
 						rdf:about="https://w3id.org/ecodigit/organization/${acronimoOrganizzazione}">
 						<foaf:name><![CDATA[${nomeOrganizzazione}]]></foaf:name>
@@ -169,20 +164,20 @@
 					</org:Organization>
 				</org:memberOf>
 			</foaf:Person>
-		</dcterms:rightsHolder>
+		</dcterms:rightsHolder> -->
 
 
 		<!-- Informazioni di Licenza -->
-		<dcterms:license
-			rdf:resource="${URL al documento descrittivo della licenza}" />
+		<!-- <dcterms:license
+			rdf:resource="${URL al documento descrittivo della licenza}" /> -->
 
 
 		<!-- DA MAIL nome del progetto per il quale è stato prodotto il modello -->
 		<project:isOutcomeOfProject>
 			<project:PublicInvestmentProject
-				rdf:about="https://w3id.org/ecodigit/project/${acronimoProgetto}">
-				<project:projectTitle>${titoloProgetto}</project:projectTitle>
-				<project:projectAcronym>${acronimoProgetto}</project:projectAcronym>
+				rdf:about="https://w3id.org/ecodigit/project/MuraAureliane">
+				<project:projectTitle></project:projectTitle>
+				<project:projectAcronym>progetto Mura Aureliane, convenzione con la Sovrintendenza Capitolina ai Beni Culturali</project:projectAcronym>
 			</project:PublicInvestmentProject>
 		</project:isOutcomeOfProject>
 
@@ -192,9 +187,15 @@
 		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[${uriModello}]]></SM:URL>
 
 		<!-- Keyword -->
-		<prism:keyword xml:lang="${lingua keyword}"><![CDATA[${keyword testuale}]]></prism:keyword>
+		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
+		<prism:keyword xml:lang="english"><![CDATA[Cultural Heritage]]></prism:keyword>
+		<prism:keyword xml:lang="english"><![CDATA[3D models]]></prism:keyword>
+		<prism:keyword xml:lang="english"><![CDATA[Aurelian Walls]]></prism:keyword>
+		<prism:keyword xml:lang="english"><![CDATA[Porta Latina]]></prism:keyword>
 
-		<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
+	<!-- da finire di compilare------
+		
+			<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
 			3d -->
 		<dcterms:relation
 			rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
@@ -286,7 +287,9 @@
 
 			</ve:Visualization>
 		</ve:hasVisualization>
-
+ 
+ 
+ -->
 
 	</rdf:Description>
 
