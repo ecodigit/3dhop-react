@@ -184,7 +184,7 @@
 
 		<!-- qui mettere la URI del modello -->
 		<!-- dove sta fisicamente il file del modello 3d -->
-		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[${uriModello}]]></SM:URL>
+		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_e.nxz]]></SM:URL>
 
 		<!-- Keyword -->
 		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
@@ -193,7 +193,7 @@
 		<prism:keyword xml:lang="english"><![CDATA[Aurelian Walls]]></prism:keyword>
 		<prism:keyword xml:lang="english"><![CDATA[Porta Latina]]></prism:keyword>
 
-	<!-- da finire di compilare------
+	
 		
 			<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
 			3d -->
@@ -209,12 +209,85 @@
 		<ve:containsSubModel>true</ve:containsSubModel>
 
 		<!-- Per ogni modello "legato" copiare il blocco <ve:hasSubModel></ve:hasSubModel> -->
+		
 		<ve:hasSubModel>
 			<ve:SubModel>
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[${uriModelloLegato}]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_i_sx.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+		<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_interno.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+		<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_i_dx.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+		<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_j20_e.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+				<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_j20_i.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+				<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_e.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+				<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_i_dx.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+				<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_i_sx.nxz]]></SM:URL>
+			</ve:SubModel>
+		</ve:hasSubModel>
+
+			<ve:hasSubModel>
+			<ve:SubModel>
+				<!-- qui mettere la URI del modello -->
+				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
+				<SM:URL
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_interno.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -228,33 +301,33 @@
 		<ve:hasHotspot>
 			<ve:Hotspot>
 				<!-- nome -->
-				<l0:name>${nomeHotspot}</l0:name>
+				<l0:name>iconografia storica</l0:name>
 				<!-- identificativo -->
-				<ve:hotspotIdentifier>${identificcativoHotspot}
+				<ve:hotspotIdentifier>spot
 				</ve:hotspotIdentifier>
 				<!-- tipo inserire uno tra: "Sphere", "Point", "Surface" -->
 				<rdf:type
-					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/${tipoHotspot}" />
+					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/sphere" />
 
 				<!-- element con cui è relezionato l'hotspot (con metadati) -->
 				<dc:relation>
 					<rdf:Description rdf:about="${uriElemento}">
-						<dc:title><![CDATA[${titoloElemento}]]></dc:title>
-						<l0:description>${descrizioneElemento}</l0:description>
+						<dc:title><![CDATA[L'iconografia storica]]></dc:title>
+						<l0:description>Numerose sono le rappresentazioni della porta Latina che descrivono le diverse fasi di vita del monumento, qui sono riportate alcune viste dall'esterno delle Mura Aureliane</l0:description>
 						<!-- inserire il tipo -->
 						<!-- Per oggetto ${tipoFeature}=http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object -->
 						<!-- Per pubblicazione ${tipoFeature}=http://purl.org/spar/fabio/Work -->
 						<!-- Per organizzazione ${tipoFeature}=http://www.w3.org/ns/org#Organization -->
-						<rdf:type rdf:resource="${tipoFeature}" />
+						<rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object" />
 						<!-- Eventualmente altri campi o anche altri tipi -->
 					</rdf:Description>
 				</dc:relation>
 
 				<!-- SOLO URL a oggetto in relazione con l'hotspot -->
-				<dcterms:relation
+			<!-- 	<dcterms:relation
 					rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
 				</dcterms:relation>
-
+ -->
 			</ve:Hotspot>
 		</ve:hasHotspot>
 
@@ -283,13 +356,13 @@
 
 				<!-- orientamento lungo asse Z: riguarda l'informazione relativa all'orientamento 
 					del modello. Questo perché ptrebbe essere disallineato. -->
-				<ve:isOrientedAlongZAxis><![CDATA[true]]></ve:isOrientedAlongZAxis>
+				<ve:isOrientedAlongZAxis> true </ve:isOrientedAlongZAxis>
 
 			</ve:Visualization>
 		</ve:hasVisualization>
  
  
- -->
+ 
 
 	</rdf:Description>
 
