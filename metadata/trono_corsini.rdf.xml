@@ -354,17 +354,6 @@
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
 		<ve:containsSubModel>false</ve:containsSubModel>
 
-		<!-- Per ogni modello "legato" copiare il blocco <ve:hasSubModel></ve:hasSubModel> -->
-		<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del modello -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[${uriModelloLegato}]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-
 
 		<!-- contiene hotspot o features: "true" se ha features/hotspot, "false" 
 			altrimenti -->
@@ -388,7 +377,7 @@
 					<ve:Scale>
 						<MU:hasMeasurementUnit>
 							<MU:MeasurementUnit
-								rdf:about="https://w3id.org/ecodigit/resource/m">
+								rdf:about="https://w3id.org/ecodigit/resource/cm">
 								<rdfs:label>cm</rdfs:label>
 							</MU:MeasurementUnit>
 						</MU:hasMeasurementUnit>
