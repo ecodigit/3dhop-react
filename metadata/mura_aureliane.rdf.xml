@@ -202,7 +202,7 @@
 		</dcterms:relation> -->
 
 		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
-		<dcterms:subject rdf:resource="${uriCategoria}" />--->
+		<dcterms:subject rdf:resource="${uriCategoria}" />-->
 
 
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
