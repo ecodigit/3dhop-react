@@ -187,7 +187,7 @@
 
 		<!-- qui mettere la URI del modello -->
 		<!-- dove sta fisicamente il file del modello 3d -->
-		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_e.nxz]]></SM:URL>
+		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_e.nxz]]></SM:URL>
 
 		<!-- Keyword -->
 		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
@@ -236,7 +236,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_i_sx.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_i_sx.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -245,7 +245,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_interno.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_interno.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -254,7 +254,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/Porta_Latina_i_dx.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_i_dx.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -263,7 +263,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_j20_e.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_j20_e.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -272,7 +272,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_j20_i.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_j20_i.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -281,7 +281,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_e.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_e.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -290,7 +290,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_i_dx.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_i_dx.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -299,7 +299,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_i_sx.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_i_sx.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
@@ -308,7 +308,7 @@
 				<!-- qui mettere la URI del modello -->
 				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
 				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://www.w3.org/2001/models/torre_k1_interno.nxz]]></SM:URL>
+					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_interno.nxz]]></SM:URL>
 			</ve:SubModel>
 		</ve:hasSubModel>
 
