@@ -16,5 +16,7 @@
     "url": "https://github.com/ecodigit/3dhop-react/issues"
   },
   "homepage": "https://github.com/ecodigit/3dhop-react#readme",
-  "dependencies": {}
+  "dependencies": {
+    "fetch-sparql-endpoint": "^1.5.0"
+  }
 }
