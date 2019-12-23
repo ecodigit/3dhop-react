@@ -343,7 +343,22 @@
 
 		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
 			<dcterms:subject rdf:resource="${uriCategoria}" /> -->
-
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Ingegneria_civile_e_Architettura" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Modellazione_3d" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Modelli" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/RESTAURO" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/STORIA" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Conservazione_e_restauro_dei_beni_culturali" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Archeologia" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Conservazione_dei_beni_architettonici_e_ambientali" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Beni_Culturali" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Immagini" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/INFORMATICA" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Metolodogia_informatica_per_le_discipline_umanistiche" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Rilievo_dell%27architettura" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Tecnologie_per_la_conservazione_e_il_restauro_dei_beni_culturali" />
+			<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/ETRUSCOLOGIA_E_ANTICHITA%27_ITALICHE" />
 
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
 		<ve:containsSubModel>false</ve:containsSubModel>
@@ -356,7 +371,7 @@
 
 
 
-		<!-- - Metadati relativi alla visutalizazione -->
+		<!-- - Metadati relativi alla visualizazione -->
 		<ve:hasVisualization>
 			<ve:Visualization
 				rdf:about="https://w3id.org/ecodigit/object/enea/trono_corsini/Visualizzazione_1">
