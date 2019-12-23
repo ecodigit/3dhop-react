@@ -45,6 +45,9 @@
 				<rdfs:label xml:lang="it">Modello 3D</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
+		
+				<rdf:type
+			rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
 
 		<!-- Inserire identificativo univoco del modello -->
 		<!-- <dc:identifier><![CDATA[${idModello}]]></dc:identifier> -->
@@ -176,8 +179,8 @@
 		<project:isOutcomeOfProject>
 			<project:PublicInvestmentProject
 				rdf:about="https://w3id.org/ecodigit/project/MuraAureliane">
-				<project:projectTitle></project:projectTitle>
-				<project:projectAcronym>progetto Mura Aureliane, convenzione con la Sovrintendenza Capitolina ai Beni Culturali</project:projectAcronym>
+				<project:projectTitle>progetto Mura Aureliane, convenzione con la Sovrintendenza Capitolina ai Beni Culturali</project:projectTitle>
+				<project:projectAcronym>Mura Aureliane</project:projectAcronym>
 			</project:PublicInvestmentProject>
 		</project:isOutcomeOfProject>
 
@@ -196,13 +199,13 @@
 	
 		
 			<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
-			3d -->
+			3d 
 		<dcterms:relation
 			rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
-		</dcterms:relation>
+		</dcterms:relation> -->
 
-		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology -->
-		<dcterms:subject rdf:resource="${uriCategoria}" />
+		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
+		<dcterms:subject rdf:resource="${uriCategoria}" />-->
 
 
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
@@ -303,15 +306,14 @@
 				<!-- nome -->
 				<l0:name>iconografia storica</l0:name>
 				<!-- identificativo -->
-				<ve:hotspotIdentifier>spot
-				</ve:hotspotIdentifier>
+				<ve:hotspotIdentifier>spot</ve:hotspotIdentifier>
 				<!-- tipo inserire uno tra: "Sphere", "Point", "Surface" -->
 				<rdf:type
-					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/sphere" />
+					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere" />
 
 				<!-- element con cui è relezionato l'hotspot (con metadati) -->
 				<dc:relation>
-					<rdf:Description rdf:about="${uriElemento}">
+					<rdf:Description rdf:about="https://w3id.org/ecodigit/resource/MuraAureliane_IconografiaStorica">
 						<dc:title><![CDATA[L'iconografia storica]]></dc:title>
 						<l0:description>Numerose sono le rappresentazioni della porta Latina che descrivono le diverse fasi di vita del monumento, qui sono riportate alcune viste dall'esterno delle Mura Aureliane</l0:description>
 						<!-- inserire il tipo -->
@@ -356,7 +358,7 @@
 
 				<!-- orientamento lungo asse Z: riguarda l'informazione relativa all'orientamento 
 					del modello. Questo perché ptrebbe essere disallineato. -->
-				<ve:isOrientedAlongZAxis> true </ve:isOrientedAlongZAxis>
+				<ve:isOrientedAlongZAxis>true</ve:isOrientedAlongZAxis>
 
 			</ve:Visualization>
 		</ve:hasVisualization>

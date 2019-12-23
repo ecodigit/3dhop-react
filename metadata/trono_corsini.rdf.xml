@@ -46,6 +46,9 @@
 			</rdf:Description>
 		</rdf:type>
 
+		<rdf:type
+			rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
+
 		<!-- Inserire identificativo univoco del modello -->
 		<!-- <dc:identifier><![CDATA[${idModello}]]></dc:identifier> -->
 
@@ -56,7 +59,7 @@
 		<!-- (Se disponibile) Inserire una descrizione del modello in lingua inglese -->
 		<dc:description xml:lang="en"><![CDATA[The Corsini throne was found between 1732 and 1734, 
 		during excavations to realise the foundation of the Corsini’s family chapel in the basilica 
-		of S. Giovanni in Laterano. The decorations and typology of this  artefact, apparently would 
+		of S. Giovanni in Laterano. The decorations and typology of this  artefact, apparently would 
 		leave it to consider typical of Etruscan series of funerary thrones, commonly made with 
 		bronze or terracotta. Potogrammetric scanning has produced more than 500 images 
 		(5184 x 3456 pixel, 5 MB each) taken with a Nikon D60 digital camera with zoom and focus 
@@ -106,7 +109,6 @@
 			</foaf:Person>
 		</frbr:creator>
 		<frbr:creator>
-		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/samuele.pierattini">
 				<foaf:name>Samuele Pierattini</foaf:name>
@@ -122,7 +124,6 @@
 				</org:memberOf>
 			</foaf:Person>
 		</frbr:creator>
-		<frbr:creator>
 		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/silvio.migliori">
@@ -140,7 +141,6 @@
 			</foaf:Person>
 		</frbr:creator>
 		<frbr:creator>
-		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/antonio.perozziello">
 				<foaf:name>Antonio Perozziello</foaf:name>
@@ -156,7 +156,6 @@
 				</org:memberOf>
 			</foaf:Person>
 		</frbr:creator>
-		<frbr:creator>
 		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/giovanni.bracco">
@@ -174,7 +173,6 @@
 			</foaf:Person>
 		</frbr:creator>
 		<frbr:creator>
-		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/beatrice.calosso">
 				<foaf:name>Beatrice Calosso</foaf:name>
@@ -190,7 +188,6 @@
 				</org:memberOf>
 			</foaf:Person>
 		</frbr:creator>
-		<frbr:creator>
 		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/massimiliano.guarneri">
@@ -208,7 +205,6 @@
 			</foaf:Person>
 		</frbr:creator>
 		<frbr:creator>
-		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/giulia.chellini">
 				<foaf:name>Giulia Chellini</foaf:name>
@@ -224,7 +220,6 @@
 				</org:memberOf>
 			</foaf:Person>
 		</frbr:creator>
-		<frbr:creator>
 		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/irene.bellagamba">
@@ -242,7 +237,6 @@
 			</foaf:Person>
 		</frbr:creator>
 		<frbr:creator>
-		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/andrea.quintiliani">
 				<foaf:name>Andrea Quintiliani</foaf:name>
@@ -258,7 +252,6 @@
 				</org:memberOf>
 			</foaf:Person>
 		</frbr:creator>
-		<frbr:creator>
 		<frbr:creator>
 			<foaf:Person
 				rdf:about="https://w3id.org/ecodigit/person/luciano.demartino">
@@ -326,7 +319,8 @@
 			<project:PublicInvestmentProject
 				rdf:about="https://w3id.org/ecodigit/project/COBRA/WeACT3">
 				<project:projectTitle>COBRA/WeACT3</project:projectTitle>
-				<project:projectAcronym>COBRA/WeACT3</project:projectAcronym>
+				<project:projectAcronym>COBRA/WeACT3
+				</project:projectAcronym>
 			</project:PublicInvestmentProject>
 		</project:isOutcomeOfProject>
 
@@ -347,8 +341,8 @@
 			rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
 		</dcterms:relation>
 
-		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology -->
-		<dcterms:subject rdf:resource="${uriCategoria}" />
+		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
+			<dcterms:subject rdf:resource="${uriCategoria}" /> -->
 
 
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
@@ -359,13 +353,13 @@
 			altrimenti -->
 		<ve:containsHotspot>false</ve:containsHotspot>
 
-		
+
 
 
 		<!-- - Metadati relativi alla visutalizazione -->
 		<ve:hasVisualization>
 			<ve:Visualization
-				rdf:about="https://w3id.org/ecodigit/object/enea/trono_corsini/${id visualizzazione}">
+				rdf:about="https://w3id.org/ecodigit/object/enea/trono_corsini/Visualizzazione_1">
 
 				<!-- DA MAIL modello scalato: indica se il modello è scalato oppure no. -->
 				<!-- true/false -->
