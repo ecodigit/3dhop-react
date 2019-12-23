@@ -199,10 +199,15 @@
 	
 		
 			<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
-			3d 
+			3d -->
 		<dcterms:relation
-			rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
-		</dcterms:relation> -->
+			rdf:resource="https://w3id.org/ecodigit/work/Esposito2017Le">
+		</dcterms:relation> 
+		<dcterms:relation
+			rdf:resource="https://w3id.org/ecodigit/work/Canciani2017Le">
+		</dcterms:relation> 
+
+
 
 		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
 		<dcterms:subject rdf:resource="${uriCategoria}" />-->
