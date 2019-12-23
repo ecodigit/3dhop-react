@@ -45,6 +45,9 @@
 				<rdfs:label xml:lang="it">3D Model</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
+		
+		<rdf:type
+			rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
 
 		<!-- Inserire identificativo univoco del modello -->
 		<!-- <dc:identifier><![CDATA[${idModello}]]></dc:identifier> -->
@@ -347,8 +350,8 @@
 			rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
 		</dcterms:relation>
 
-		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology -->
-		<dcterms:subject rdf:resource="${uriCategoria}" />
+		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
+		<dcterms:subject rdf:resource="${uriCategoria}" /> -->
 
 
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
@@ -365,7 +368,7 @@
 		<!-- - Metadati relativi alla visutalizazione -->
 		<ve:hasVisualization>
 			<ve:Visualization
-				rdf:about="https://w3id.org/ecodigit/object/enea/trono_corsini/${id visualizzazione}">
+				rdf:about="https://w3id.org/ecodigit/object/enea/trono_corsini/Visualizzazione_1">
 
 				<!-- DA MAIL modello scalato: indica se il modello è scalato oppure no. -->
 				<!-- true/false -->
