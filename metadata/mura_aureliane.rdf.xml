@@ -45,6 +45,9 @@
 				<rdfs:label xml:lang="it">Modello 3D</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
+		
+				<rdf:type
+			rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
 
 		<!-- Inserire identificativo univoco del modello -->
 		<!-- <dc:identifier><![CDATA[${idModello}]]></dc:identifier> -->
