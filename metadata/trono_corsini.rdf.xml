@@ -327,7 +327,7 @@
 
 		<!-- qui mettere la URI del modello -->
 		<!-- dove sta fisicamente il file del modello 3d -->
-		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[models/trono_corsini.nxz]]></SM:URL>
+		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/trono_corsini.nxz]]></SM:URL>
 
 		<!-- Keyword -->
 		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
