@@ -41,7 +41,7 @@
 
 		<rdf:type>
 			<rdf:Description
-				rdf:about="https://w3id.org/ecodigit/ontology/virtualEnvironments/GEO-DATO">
+				rdf:about="https://w3id.org/ecodigit/ontology/virtualEnvironments/GEO-OBJ">
 				<rdfs:label xml:lang="it">GEO-OBJ</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
@@ -188,7 +188,7 @@
 
 		<!-- qui mettere la URI del GEO-DATO -->
 		<!-- dove sta fisicamente il file del GEO-DATO 3d -->
-		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/geodati/MURA_AURELIANE.SHP]]></SM:URL>
+		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/geoObj/MURA_AURELIANE.SHP]]></SM:URL>
 
 		<!-- Keyword -->
 		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
