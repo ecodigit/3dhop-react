@@ -278,13 +278,14 @@
 		</ve:hasHotspot>
 
 <!-- - Metadati relativi alla visutalizazione 
-1) SE HAI PREVISTO ALCUNE CATEGORIE PER LA VISUALIZZAZIONE
-2) LIVELLO DI ZOOM 
+1) SE HAI PREVISTO ALCUNE CATEGORIE PER LA VISUALIZZAZIONE LA RIGA 288 VA BENE???
+2) impostare LIVELLO DI ZOOM 
+3) impostare coordinate del centro 
 -->
 		<!-- - Metadati relativi alla visutalizazione -->
 		<ve:hasVisualization>
 			<ve:Visualization
-				rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina/${id visualizzazione}">
+				rdf:about="https://w3id.org/ecodigit/object/saccone/GEO-OBJ/MURAvisualizzazione1">
 
 
 			</ve:Visualization>
