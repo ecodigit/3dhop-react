@@ -277,7 +277,10 @@
 			</ve:Hotspot>
 		</ve:hasHotspot>
 
-
+<!-- - Metadati relativi alla visutalizazione 
+1) SE HAI PREVISTO ALCUNE CATEGORIE PER LA VISUALIZZAZIONE
+2) LIVELLO DI ZOOM 
+-->
 		<!-- - Metadati relativi alla visutalizazione -->
 		<ve:hasVisualization>
 			<ve:Visualization
