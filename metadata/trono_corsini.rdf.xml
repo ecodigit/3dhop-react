@@ -35,14 +35,14 @@
 		<rdf:type>
 			<rdf:Description
 				rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">
-				<rdfs:label xml:lang="it">Object</rdfs:label>
+				<rdfs:label xml:lang="en">Object</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
 
 		<rdf:type>
 			<rdf:Description
 				rdf:about="https://w3id.org/ecodigit/ontology/virtualEnvironments/3DModel">
-				<rdfs:label xml:lang="it">3D Model</rdfs:label>
+				<rdfs:label xml:lang="en">3D Model</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
 
