@@ -360,7 +360,7 @@
 		<!-- - Metadati relativi alla visutalizazione -->
 		<ve:hasVisualization>
 			<ve:Visualization
-				rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina/${id visualizzazione}">
+				rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina/visualizzazione1">
 
 				<!-- DA MAIL modello scalato: indica se il modello è scalato oppure no. -->
 				<!-- true/false -->
