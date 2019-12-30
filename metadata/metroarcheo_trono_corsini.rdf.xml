@@ -33,7 +33,11 @@
 
 		<dc:title><![CDATA[Photogrammetry and structured light: comparison and integration of techniques in survey of the Corsini Throne at Corsini Gallery in Rome ]]></dc:title>
 		<dc:identifier><![CDATA[10.1007/978-3-319-54499-1_1]]></dc:identifier>
-		<dc:description xml:lang="en"><![CDATA[The Corsini Throne preserved in the Corsini Gallery in Rome has been investigated by an integrated approach involving non-invasive technologies: photogrammetry and structured light. The advantages and potential of the integration of these two techniques are illustrated in this paper. The ENEA R.C. has conducted survey campaign on the Corsini Throne preserved at Corsini Gallery in Rome. The activity was developed in the frame of the "WeACT3" Project (Acting Together - Technology for Art, Culture, Tourism and Territory) jointly signed by CIVITA Association, of which ENEA is an honorary member, and the National Barberini and Corsini Galleries, collaborating in a partnership of several national and international enterprises. ]]></dc:description>
+		<dc:description xml:lang="en"><![CDATA[The Corsini Throne preserved in the Corsini Gallery in Rome has been investigated by an integrated approach involving non-invasive 
+		technologies: photogrammetry and structured light. The advantages and potential of the integration of these two techniques are illustrated in this paper. The ENEA R.C. has 
+		conducted survey campaign on the Corsini Throne preserved at Corsini Gallery in Rome. The activity was developed in the frame of the "WeACT3" Project 
+		(Acting Together - Technology for Art, Culture, Tourism and Territory) jointly signed by CIVITA Association, of which ENEA is an honorary member, and the National Barberini 
+		and Corsini Galleries, collaborating in a partnership of several national and international enterprises.]]></dc:description>
 		<dc:language>en</dc:language>
 		<dc:date>2017</dc:date>
 		<dc:creator><![CDATA[Mongelli, Marialuisa and Chellini, Giulia and Migliori, Silvio and Perozziello, Antonio and Pierattini, Samuele and Puccini, Marco and Cosma, Alessandro]]></dc:creator>
@@ -178,7 +182,7 @@
 					a cui la persona appartiene -->
 				<org:memberOf>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/rm3">
+						rdf:about="https://w3id.org/ecodigit/organization/galleriecorsinibarberini">
 						<foaf:name><![CDATA[GallerieCorsini-Barberini]]></foaf:name>
 						<foaf:acronym>Gallerie Corsini Barberini</foaf:acronym>
 					</org:Organization>
@@ -188,9 +192,9 @@
 
 		<!-- Vista particolare per pubblicazioni -->
 
-		<bibo:pageStart>3</bibo:pageStart>
-		<bibo:pageEnd>37</bibo:pageEnd>
-		<dcterms:extent>35</dcterms:extent>
+		<bibo:pageStart>166</bibo:pageStart>
+		<bibo:pageEnd>171</bibo:pageEnd>
+		<dcterms:extent>5</dcterms:extent>
 
 		<datacite:hasIdentifier>
 			<datacite:ResourceIdentifier>
@@ -216,47 +220,10 @@
 		</datacite:hasIdentifier>
 		<bibo:isbn><![CDATA[978-92-990084-5-4]]></bibo:isbn>
 
-		<datacite:hasIdentifier>
-			<datacite:ResourceIdentifier>
-				<literal:hasLiteralValue><![CDATA[978-3-319-54498-4]]></literal:hasLiteralValue>
-				<datacite:usesIdentifierScheme>
-					<!-- Usare Vocabolario datacite https://sparontologies.github.io/datacite/current/datacite.html 
-						per i resource identifier schema più comuni: arkni, arxivni, bibcodeni, doini, 
-						ean13ni, eissnni, handleni, infourini, isbnni, issnni, istcni, lissnni, local 
-						resource identifier schemeni, lsidni, nihmsidni, ocini, piini, pmcidni, pmidni, 
-						purlni, sicini, upcni, urini, urlni, urnniark, arxiv, bibcode, doi, ean13, 
-						eissn, handle, infouri, isbn, issn, istc, lissn, local resource identifier 
-						scheme, lsid, nihmsid, oci, pii, pmcid, pmid, purl, sici, upc, uri, url, 
-						urn. -->
-					<!-- per quelli non definiti usare il seguente schema di uri https://w3id.org/ecodigit/resource/[nome 
-						schema] e.g. https://w3id.org/ecodigit/resource/googlescholar specificando 
-						il nome del servizio (e.g. Google Scholar) e la URL alla homepage -->
-					<datacite:ResourceIdentifierScheme
-						rdf:about="http://purl.org/spar/datacite/isbn">
-						<rdfs:label>ISBN</rdfs:label>
-					</datacite:ResourceIdentifierScheme>
-				</datacite:usesIdentifierScheme>
-			</datacite:ResourceIdentifier>
-		</datacite:hasIdentifier>
-		<bibo:isbn><![CDATA[978-3-319-54498-4]]></bibo:isbn>
-
-
 		<rdf:type>
 			<rdf:Description
-				rdf:about="http://purl.org/spar/fabio/Chapter">
-				<rdfs:label xml:lang="en">Chapter</rdfs:label>
-			</rdf:Description>
-		</rdf:type>
-		<rdf:type>
-			<rdf:Description
-				rdf:about="http://purl.org/spar/fabio/BookChapter">
-				<rdfs:label xml:lang="en">Book Chapter</rdfs:label>
-			</rdf:Description>
-		</rdf:type>
-		<rdf:type>
-			<rdf:Description
-				rdf:about="https://w3id.org/ecodigit/publication/CNR_DL_TYPE_2201">
-				<rdfs:label xml:lang="it">Contributo in volume</rdfs:label>
+				rdf:about="https://w3id.org/ecodigit/publication/ENEA_METROARCHEO_2019_tronocorsini">
+				<rdfs:label xml:lang="en">Conference Proceedings</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
 
@@ -264,7 +231,11 @@
 		<prism:keyword xml:lang="en">Linked Open Data</prism:keyword>
 
 
-		<bibo:abstract xml:lang="en"><![CDATA[Cultural heritage consists of heterogeneous resources: archaeological artefacts, monuments, sites, landscapes, paintings, photos, books and expressions of human creativity, often enjoyed in different forms: tangible, intangible or digital. Each resource is usually documented, conserved and managed by cultural institutes like museums, libraries or holders of archives. These institutes make available a detailed description of the objects as catalog records. In this context, the Chapter proposes both a classification of cultural heritage data types and a process for cultural heritage valorisation through the wide-spreading Linked Open Data paradigm. The classification and process have been defined in the context of a collaboration between the Semantic Technology Laboratory of the National Research Council (STLab) and the Italian Ministry of Cultural Heritage and Activities and Tourism (MIBACT) that the Chapter describes, although we claim they are sufficiently general to be adopted in every cultural heritage scenario. In particular, the Chapter introduces both a suite of ontology modules named Cultural-ON to model the principal elements identified in the cultural heritage data type classification, and the process we employed for data valorisation purposes. To this end, semantic technologies are exploited; that is, technologies that allow us to conceptualise and describe the meaning of data forming the cultural heritage and including such entities as places, institutions, cultural heritage events, availability, etc.. These entities have special characteristics and are connected with each other in a profound way. The result is a knowledge base consisting of semantic interconnections with also other data available in the Web to be exploited according to different tasks and users preferences. By navigating the semantic relationships between the various objects of the knowledge base, new semantic paths can be revealed and utilised with the aim to develop innovative services and applications. The process is compliant with Linked Open Data and W3C Semantic Web best practices so that to enable a wider promotion of cultural heritage, and of sharing and reuse of cultural heritage data in the Web. The Chapter concludes presenting a number of methodological principles and lessons learnt from the STLab/MIBACT collaboration that are applicable to any cultural heritage context and, in some cases, also to other domains.]]></bibo:abstract>
+		<bibo:abstract xml:lang="en"><![CDATA[The Corsini Throne preserved in the Corsini Gallery in Rome has been investigated by an integrated approach involving non-invasive 
+		technologies: photogrammetry and structured light. The advantages and potential of the integration of these two techniques are illustrated in this paper. The ENEA R.C. has 
+		conducted survey campaign on the Corsini Throne preserved at Corsini Gallery in Rome. The activity was developed in the frame of the "WeACT3" Project 
+		(Acting Together - Technology for Art, Culture, Tourism and Territory) jointly signed by CIVITA Association, of which ENEA is an honorary member, and the National Barberini 
+		and Corsini Galleries, collaborating in a partnership of several national and international enterprises.]]></bibo:abstract>
 
 		<dcterms:isPartOf>
 			<rdf:Description
@@ -311,13 +282,13 @@
 
 				<dcterms:publisher>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/Springer">
-						<foaf:name>Springer</foaf:name>
+						rdf:about="https://w3id.org/ecodigit/organization/IMEKO">
+						<foaf:name>IMEKO</foaf:name>
 						<org:hasSite>
 							<org:Site>
 								<CLV:hasAddress>
 									<CLV:Address>
-										<CLV:fullAddress><![CDATA[Gewerbestrasse 11, 6330 Cham, Svizzera]]></CLV:fullAddress>
+										<CLV:fullAddress><![CDATA[D. Mangeron 23 Iasi ROMANIA ]]></CLV:fullAddress>
 									</CLV:Address>
 								</CLV:hasAddress>
 							</org:Site>
@@ -331,21 +302,19 @@
 			<rdf:Seq>
 
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/giorgia.lodi" />
+					rdf:resource="https://w3id.org/ecodigit/person/marialuisa.mongelli" />
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/luigi.asprino" />
+					rdf:resource="https://w3id.org/ecodigit/person/giulia.chellini" />
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/andreagiovanni.nuzzolese" />
+					rdf:resource="https://w3id.org/ecodigit/person/silvio.migliori" />
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/valentina.presutti" />
+					rdf:resource="https://w3id.org/ecodigit/person/antonio.perozziello" />
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/aldo.gangemi" />
+					rdf:resource="https://w3id.org/ecodigit/person/samuele.pierattini" />
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/diego.reforgiatorecupero" />
+					rdf:resource="https://w3id.org/ecodigit/person/marco.puccini" />
 				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/chiara.veninata" />
-				<rdf:li
-					rdf:resource="https://w3id.org/ecodigit/person/annarita.orsini" />
+					rdf:resource="https://w3id.org/ecodigit/person/alessandro.cosma" />
 
 			</rdf:Seq>
 		</bibo:authorList>
@@ -354,7 +323,7 @@
 
 	<!-- Provenance -->
 	<prov:Entity
-		rdf:about="https://w3id.org/ecodigit/publication/Lodi2017Semantic">
+		rdf:about="https://w3id.org/ecodigit/publication/ENEA_METROARCHEO_2019_tronocorsini">
 		<prov:wasGeneratedBy>
 			<prov:Activity>
 				<rdfs:comment><![CDATA[Attività di inserimento, unione e triplificazione delle informazioni riguardanti le pubblicazioni.]]></rdfs:comment>

@@ -276,7 +276,7 @@
 					a cui la persona appartiene -->
 				<org:memberOf>
 					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/rm3">
+						rdf:about="https://w3id.org/ecodigit/organization/galleriecorsinibarberini">
 						<foaf:name><![CDATA[GallerieCorsini-Barberini]]></foaf:name>
 						<foaf:acronym>Gallerie Corsini Barberini</foaf:acronym>
 					</org:Organization>
