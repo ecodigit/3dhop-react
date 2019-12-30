@@ -188,7 +188,7 @@
 
 		<!-- qui mettere la URI del GEO-DATO -->
 		<!-- dove sta fisicamente il file del GEO-DATO 3d -->
-		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/geodati/MURA_AURELIANE.SHP]]></SM:URL>
+		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/geodati/MURA_AURELIANE.KML]]></SM:URL>
 
 		<!-- Keyword -->
 		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
@@ -208,6 +208,9 @@
 			rdf:resource="https://w3id.org/ecodigit/work/Canciani2017Le">
 		</dcterms:relation> 
 
+		<dcterms:relation
+			rdf:resource="MODELLO3D">
+		</dcterms:relation> 
 
 
 		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
@@ -235,88 +238,7 @@
 		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
 		<ve:containsSubModel>true</ve:containsSubModel>
 
-		<!-- Per ogni GEO-DATO "legato" copiare il blocco <ve:hasSubModel></ve:hasSubModel> -->
-		
-		<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_i_sx.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
 
-		<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_interno.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-		<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/Porta_Latina_i_dx.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-		<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_j20_e.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-				<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_j20_i.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-				<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_e.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-				<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_i_dx.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-				<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_i_sx.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
-
-			<ve:hasSubModel>
-			<ve:SubModel>
-				<!-- qui mettere la URI del GEO-DATO -->
-				<!-- per ora ho messo solo questo campo non so se ve ne servono altri -->
-				<SM:URL
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/3dhop-react/models/torre_k1_interno.nxz]]></SM:URL>
-			</ve:SubModel>
-		</ve:hasSubModel>
 
 
 
@@ -331,10 +253,7 @@
 				<l0:name>iconografia storica</l0:name>
 				<!-- identificativo -->
 				<ve:hotspotIdentifier>spot</ve:hotspotIdentifier>
-				<!-- tipo inserire uno tra: "Sphere", "Point", "Surface" -->
-				<rdf:type
-					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere" />
-
+				
 				<!-- element con cui è relezionato l'hotspot (con metadati) -->
 				<dc:relation>
 					<rdf:Description rdf:about="https://w3id.org/ecodigit/resource/MuraAureliane_IconografiaStorica">
@@ -344,6 +263,7 @@
 						<!-- Per oggetto ${tipoFeature}=http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object -->
 						<!-- Per pubblicazione ${tipoFeature}=http://purl.org/spar/fabio/Work -->
 						<!-- Per organizzazione ${tipoFeature}=http://www.w3.org/ns/org#Organization -->
+					
 						<rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object" />
 						<!-- Eventualmente altri campi o anche altri tipi -->
 					</rdf:Description>
@@ -363,26 +283,6 @@
 			<ve:Visualization
 				rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina/${id visualizzazione}">
 
-				<!-- DA MAIL modello scalato: indica se il modello è scalato oppure no. -->
-				<!-- true/false -->
-				<ve:isScaled>true</ve:isScaled>
-
-				<!-- unità di misura: se il modello è scalato, indica l'unità di misura. -->
-				<!-- Sostituire unità di misura con cm/m/mm -->
-				<ve:hasScale>
-					<ve:Scale>
-						<MU:hasMeasurementUnit>
-							<MU:MeasurementUnit
-								rdf:about="https://w3id.org/ecodigit/resource/m">
-								<rdfs:label>m</rdfs:label>
-							</MU:MeasurementUnit>
-						</MU:hasMeasurementUnit>
-					</ve:Scale>
-				</ve:hasScale>
-
-				<!-- orientamento lungo asse Z: riguarda l'informazione relativa all'orientamento 
-					del modello. Questo perché ptrebbe essere disallineato. -->
-				<ve:isOrientedAlongZAxis>true</ve:isOrientedAlongZAxis>
 
 			</ve:Visualization>
 		</ve:hasVisualization>
