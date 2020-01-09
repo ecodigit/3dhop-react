@@ -222,14 +222,10 @@
 
 		<rdf:type>
 			<rdf:Description
-				rdf:about="https://w3id.org/ecodigit/publication/ENEA_METROARCHEO_2019_tronocorsini">
-				<rdfs:label xml:lang="en">Conference Proceedings</rdfs:label>
+				rdf:about="http://purl.org/spar/fabio/ConferencePaper">
+				<rdfs:label xml:lang="en">Conference Paper</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
-
-		<prism:keyword xml:lang="en">Semantic Web</prism:keyword>
-		<prism:keyword xml:lang="en">Linked Open Data</prism:keyword>
-
 
 		<bibo:abstract xml:lang="en"><![CDATA[The Corsini Throne preserved in the Corsini Gallery in Rome has been investigated by an integrated approach involving non-invasive 
 		technologies: photogrammetry and structured light. The advantages and potential of the integration of these two techniques are illustrated in this paper. The ENEA R.C. has 
@@ -237,67 +233,7 @@
 		(Acting Together - Technology for Art, Culture, Tourism and Territory) jointly signed by CIVITA Association, of which ENEA is an honorary member, and the National Barberini 
 		and Corsini Galleries, collaborating in a partnership of several national and international enterprises.]]></bibo:abstract>
 
-		<dcterms:isPartOf>
-			<rdf:Description
-				rdf:about="https://w3id.org/ecodigit/publication/Hai-Jew2017Data">
-
-				<dc:title><![CDATA[Data Analytics in Digital Humanities]]></dc:title>
-
-				<rdf:type>
-					<rdf:Description
-						rdf:about="http://purl.org/spar/fabio/Book">
-						<rdfs:label xml:lang="en">Book</rdfs:label>
-					</rdf:Description>
-				</rdf:type>
-
-				<datacite:hasIdentifier>
-					<datacite:ResourceIdentifier>
-						<literal:hasLiteralValue><![CDATA[978-3-319-54498-4]]></literal:hasLiteralValue>
-						<datacite:usesIdentifierScheme>
-							<datacite:ResourceIdentifierScheme
-								rdf:about="http://purl.org/spar/datacite/isbn">
-								<rdfs:label>ISBN</rdfs:label>
-							</datacite:ResourceIdentifierScheme>
-						</datacite:usesIdentifierScheme>
-					</datacite:ResourceIdentifier>
-				</datacite:hasIdentifier>
-
-				<bibo:isbn><![CDATA[978-3-319-54498-4]]></bibo:isbn>
-				<dc:identifier><![CDATA[978-3-319-54498-4]]></dc:identifier>
-
-				<bibo:editor>
-					<foaf:Person
-						rdf:about="https://w3id.org/ecodigit/person/shalin.hai-jew">
-						<foaf:givenname>Shalin</foaf:givenname>
-						<foaf:family_name>Hai-Jew</foaf:family_name>
-					</foaf:Person>
-				</bibo:editor>
-
-				<bibo:editorList>
-					<rdf:Seq>
-						<rdf:li
-							rdf:resource="https://w3id.org/ecodigit/person/shalin.hai-jew" />
-					</rdf:Seq>
-				</bibo:editorList>
-
-				<dcterms:publisher>
-					<org:Organization
-						rdf:about="https://w3id.org/ecodigit/organization/IMEKO">
-						<foaf:name>IMEKO</foaf:name>
-						<org:hasSite>
-							<org:Site>
-								<CLV:hasAddress>
-									<CLV:Address>
-										<CLV:fullAddress><![CDATA[D. Mangeron 23 Iasi ROMANIA ]]></CLV:fullAddress>
-									</CLV:Address>
-								</CLV:hasAddress>
-							</org:Site>
-						</org:hasSite>
-					</org:Organization>
-				</dcterms:publisher>
-			</rdf:Description>
-		</dcterms:isPartOf>
-
+		
 		<bibo:authorList>
 			<rdf:Seq>
 
@@ -322,39 +258,14 @@
 
 
 	<!-- Provenance -->
-	<prov:Entity
-		rdf:about="https://w3id.org/ecodigit/publication/ENEA_METROARCHEO_2019_tronocorsini">
+	<prov:Entity rdf:about="https://w3id.org/ecodigit/publication/Metroarcheo2019PhotogrammetryTronoCorsini">
 		<prov:wasGeneratedBy>
 			<prov:Activity>
-				<rdfs:comment><![CDATA[Attività di inserimento, unione e triplificazione delle informazioni riguardanti le pubblicazioni.]]></rdfs:comment>
-				<prov:wasAssociatedWith>
-					<rdf:Description
-						rdf:about="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab">
-						<foaf:name><![CDATA[Istituto di Scienze e Tecnologie della Cognizione del CNR - Semantic Technology Lab (STLab)]]></foaf:name>
-					</rdf:Description>
-				</prov:wasAssociatedWith>
-				<prov:used
-					rdf:resource="https://doi.org/10.1007/978-3-319-54499-1_1" />
-				<prov:startedAtTime
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T03:40:00Z</prov:startedAtTime>
-				<prov:endedAtTime
-					rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T03:40:00Z</prov:endedAtTime>
+				<prov:wasAssociatedWith rdf:resource="https://w3id.org/ecodigit/person/marco.puccini" />
+				<prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-05T03:40:00Z</prov:startedAtTime>
+				<prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-05T03:40:00Z</prov:endedAtTime>
 			</prov:Activity>
 		</prov:wasGeneratedBy>
 	</prov:Entity>
-
-
-	<schemaorg:DigitalDocument
-		rdf:about="https://w3id.org/ecodigit/document/Lodi2017Semantic">
-		<dc:title>Altro documento PDF associato alla pubblicazione Lodi 2017
-		</dc:title>
-		<dc:description>Altro documento PDF associato alla pubblicazione Lodi
-			2017
-		</dc:description>
-		<schemaorg:inLanguage>en</schemaorg:inLanguage>
-		<schemaorg:mainEntity
-			rdf:resource="https://w3id.org/ecodigit/publication/Lodi2017Semantic" />
-		<schemaorg:url rdf:resource="https://testurl.org" />
-	</schemaorg:DigitalDocument>
 
 </rdf:RDF>
