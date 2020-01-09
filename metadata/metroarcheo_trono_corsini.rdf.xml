@@ -44,8 +44,11 @@
 
 		<dc:contributor>
 			<org:Organization
-				rdf:about="https://w3id.org/ecodigit/organization/enea">
+				rdf:about="https://w3id.org/ecodigit/organization/ENEA">
 				<foaf:name>ENEA</foaf:name>
+				<COV:hasLogo>
+					<foaf:Image rdf:about="https://www.enea.it/++theme++ENEA/img/logoENEA.png" />
+				</COV:hasLogo>
 			</org:Organization>
 		</dc:contributor>
 
