@@ -6,7 +6,7 @@
 	xmlns:bibo="http://purl.org/ontology/bibo/"
 	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:org="http://www.w3.org/ns/org#"
-	 xmlns:COV="https://w3id.org/italia/onto/COV/" 
+	xmlns:COV="https://w3id.org/italia/onto/COV/" 
 	xmlns:CLV="https://w3id.org/italia/onto/CLV/"
 	xmlns:fabio="http://purl.org/spar/fabio/"
 	xmlns:prov="http://www.w3.org/ns/prov#"
