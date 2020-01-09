@@ -200,12 +200,8 @@
 		
 			<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
 			3d -->
-		<dcterms:relation
-			rdf:resource="https://w3id.org/ecodigit/work/Esposito2017Le">
-		</dcterms:relation> 
-		<dcterms:relation
-			rdf:resource="https://w3id.org/ecodigit/work/Canciani2017Le">
-		</dcterms:relation> 
+		<dcterms:relation rdf:resource="https://w3id.org/ecodigit/work/Esposito2017Le"/>
+		<dcterms:relation rdf:resource="https://w3id.org/ecodigit/work/Canciani2017Le"/>
 
 
 
