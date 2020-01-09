@@ -337,9 +337,7 @@
 
 		<!-- Relation: altri oggetti (e.g. schede, pubblicazioni) legate al modello 
 			3d -->
-		<dcterms:relation
-			rdf:resource="https://w3id.org/ecodigit/publication/Metroarcheo2019PhotogrammetryTronoCorsini">
-		</dcterms:relation>
+		<dcterms:relation rdf:resource="https://w3id.org/ecodigit/publication/Metroarcheo2019PhotogrammetryTronoCorsini"/>
 
 		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
 			<dcterms:subject rdf:resource="${uriCategoria}" /> -->
