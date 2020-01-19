@@ -15,12 +15,12 @@ Start container:
 `docker start 3dhop_ecodigit`  
 
 ## Todo list
-### Versione base
+#### Versione base
  - [ ] *gatherer.php*: php per interrogare lo SPARQL-Endopoint ed ottenere i metadati utili al visualizzatore
  - [x] Generazione dinamica della pagina per modelli singoli
  - [x] Generazione dinamica dell'unità di misura
  - [x] Generazione dinamica con tutte le funzioni attivate
-### Versione completa 
+#### Versione completa 
  - [ ] Generazione dinamica della pagina per modelli costituiti da *N* sottomodelli
  - [ ] Generazione dinamica di *N* hotspot
  - [ ] Generazione dinamica con selezione delle funzioni attivate
