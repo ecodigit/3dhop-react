@@ -1,7 +1,8 @@
-## Prototipo visualizzatore 3DHOP per Ecodigit
+# Prototipo visualizzatore 3DHOP per Ecodigit
+## Descrizione
 Questo prototipo ha il compito di automatizzare la visualizzazione di modelli 3D, generando dinamicamente la pagina di 3DHOP a partire dai metadati dell'oggetto. Il prototipo è pensato per essere agganciato al prototipo di pagina di ricerca.
 
-# Istruzioni
+## Istruzioni
 Build image:  
 `docker build -t 3dhop_ecodigit .`  
 Run docker:  
