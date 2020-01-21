@@ -16,11 +16,13 @@ Start container:
 
 ## Todo list
 #### Versione base
- - [ ] *gatherer.php*: php per interrogare lo SPARQL-Endopoint ed ottenere i metadati utili al visualizzatore
+ - [X] *gatherer.php*: php per interrogare lo SPARQL-Endopoint ed ottenere i metadati utili al visualizzatore
  - [x] Generazione dinamica della pagina per modelli singoli
  - [x] Generazione dinamica con unità di misura
  - [x] Generazione dinamica con tutte le funzioni attivate
 #### Versione completa 
+ - [ ] *gatherer.php* per *N* modelli (richiama i sottomodelli)
+- [ ] *gatherer.php* per *N* hotspot (richiama gli titoli e descrizioni per ogni hotspot)
  - [ ] Generazione dinamica della pagina per modelli costituiti da *N* sottomodelli
  - [ ] Generazione dinamica di *N* hotspot
  - [ ] Generazione dinamica con selezione delle funzioni attivate
