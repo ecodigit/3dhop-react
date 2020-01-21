@@ -71,21 +71,5 @@ if ($hasHotspot==true) {
   $hotspots = "There are no Hot spots!";
 }
 
-//var_dump($unitMeas);
 
-//$res = json_encode($result);
-//print_r($result[0]);
-/* echo $submodels;
-echo $hotspots; */
-//$res = json_encode($result,JSON_PRETTY_PRINT);
-
-//$unitMeas = $res->unitaDiMisura;
-//    $html="   Unita di Misura:  ".$unitMeas;
-
-// echo $res;
-
-/* foreach ($result as $row) {
-echo "<li>"."$row->URI "." $row->unitaDiMisura "." $row->hasSubModels</li>\n";
-} */
-//var_dump($result);
    ?>
