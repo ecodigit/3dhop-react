@@ -1,6 +1,5 @@
 <?php
-/* $model=$_GET['model'];
-$unitmeas=$_GET['unitmeas']; */
+
 
 include 'gatherer.php';
 
