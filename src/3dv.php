@@ -1,6 +1,9 @@
 <?php
-$model=$_GET['model'];
-$unitmeas=$_GET['unitmeas'];
+/* $model=$_GET['model'];
+$unitmeas=$_GET['unitmeas']; */
+
+include 'gatherer.php';
+
 
 $html='
 <!DOCTYPE>
@@ -228,7 +231,7 @@ else if(action==\'hotspot\'|| action==\'hotspot_on\') { presenter.toggleSpotVisi
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$(\'#measure-output\').html(measure.toFixed(2) + " " + "'.$unitmeas.'");
+	$(\'#measure-output\').html(measure.toFixed(2) + " " + "'.$unitMeas.'");
 }
 //--MEASURE--
 

@@ -1,5 +1,4 @@
 <?php
-  $started = session_start();
   /**
    * Making a SPARQL SELECT query
    *
@@ -35,7 +34,8 @@
 
 
 $result = $sparql->query($query);
-$unitMeas = $result[1]->unitaDiMisura;
+$model=$result[0]->URI;
+$unitMeas = $result[0]->unitaDiMisura;
 $hasSubmodel = $result[0]->hasSubModels;
 $hasHotspot = $result[0]->hasHotspots;
 
@@ -71,7 +71,7 @@ if ($hasHotspot==true) {
   $hotspots = "There are no Hot spots!";
 }
 
-var_dump($unitMeas);
+//var_dump($unitMeas);
 
 //$res = json_encode($result);
 //print_r($result[0]);
