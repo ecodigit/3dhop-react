@@ -328,7 +328,7 @@
 				<ve:hotspotIdentifier>spot</ve:hotspotIdentifier>
 				<!-- tipo inserire uno tra: "Sphere", "Point", "Surface" -->
 				<rdf:type
-					rdfs:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere" />
+					rdf:resource="https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere" />
 
 				<!-- element con cui è relezionato l'hotspot (con metadati) -->
 				<dc:relation>
