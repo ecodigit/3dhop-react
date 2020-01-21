@@ -1,9 +1,4 @@
 <?php
-  /*
-  * Questo è il componente incaricato di recuperare i metadati dallo SPARQL endpoint
-  * a partire dall'uri dell'oggetto. L'uri è previsto essere presente nella pagina
-  * dei risultati delle ricerche.
-  */
   $started = session_start();
   /**
    * Making a SPARQL SELECT query
@@ -15,11 +10,11 @@
    * @license    http://unlicense.org/
    */
   
-   set_include_path(get_include_path() . PATH_SEPARATOR . './lib/');
+  set_include_path(get_include_path() . PATH_SEPARATOR . './lib/');
   require_once "EasyRdf.php";
   require_once "html_tag_helpers.php";
   $sparql = new EasyRdf_Sparql_Client('http://150.146.207.67/sparql/ds'); 
-  
+
   $url = $_GET["url"];
   
   $query =
@@ -27,9 +22,7 @@
   'PREFIX ve: <https://w3id.org/ecodigit/ontology/virtualEnvironments/>'.
   'PREFIX MU: <https://w3id.org/italia/onto/MU/>'.
   'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'.
-  'PREFIX dc: <http://purl.org/dc/elements/1.1/>'.
-  'PREFIX l0: <https://w3id.org/italia/onto/l0/>'.
-  'SELECT DISTINCT ?URI ?unitaDiMisura ?hasSubModels ?hasHotspots ?url ?titolo ?descrizione WHERE {'.
+  'SELECT DISTINCT ?URI ?unitaDiMisura ?hasSubModels ?hasHotspots WHERE {'.
   '    <'.$url.'> SM:URL ?URI .'.
   '    <'.$url.'> ve:hasVisualization ?visualization .'.
   '   ?visualization ve:hasScale ?scale .'.
@@ -37,20 +30,53 @@
   '    ?mu rdfs:label ?unitaDiMisura .'.
   '    <'.$url.'> ve:containsSubModel ?hasSubModels .'.
   '    <'.$url.'> ve:containsHotspot ?hasHotspots .'.
-  '  OPTIONAL {'.
-  '    <'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasSubModel> ?submodel .'.
-  '    ?submodel <https://w3id.org/italia/onto/SM/URL> ?url .'.
-  '  }'.
-  '  OPTIONAL{'.
-  '    <'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .'.
-  '    ?hotspot dc:relation ?object .'.
-  '    OPTIONAL {?object dc:title ?titolo .}'.
-  '    OPTIONAL {?object l0:description ?descrizione .}'.
-  '  }'.
   '}';
 
 
+
 $result = $sparql->query($query);
+$unitMeas = $result[1]->unitaDiMisura;
+$hasSubmodel = $result[0]->hasSubModels;
+$hasHotspot = $result[0]->hasHotspots;
+
+if ($hasSubmodel==true) {
+  $query_sm =
+  'PREFIX ve: <https://w3id.org/ecodigit/ontology/virtualEnvironments/>'.
+  'SELECT DISTINCT ?url  WHERE {'.
+    '<'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasSubModel> ?submodel .'.
+    '?submodel <https://w3id.org/italia/onto/SM/URL> ?url .'.
+  '}';
+  $submodels = $sparql->query($query_sm);
+} else {
+  $submodels = "There are no Sub models!";
+}
+
+if ($hasHotspot==true) {
+  $query_hs =
+  'PREFIX dc: <http://purl.org/dc/elements/1.1/>'.
+  'PREFIX l0: <https://w3id.org/italia/onto/l0/>'.
+  'SELECT DISTINCT ?titolo ?descrizione ?tipoHotspot WHERE {'.
+  '<'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .'.
+  '?hotspot dc:relation ?object .'.
+  'OPTIONAL {?object dc:title ?titolo .}'.
+  'OPTIONAL {?object l0:description ?descrizione .}'.
+  /* SELECT DISTINCT ?tipoHotspot WHERE { 
+    ?model <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .
+    ?hotspot a ?tipoHotspot .
+    FILTER (?model=<'.$url.'>) 
+  }*/
+  '}';
+  $hotspots = $sparql->query($query_hs);
+} else {
+  $hotspots = "There are no Hot spots!";
+}
+
+var_dump($unitMeas);
+
+//$res = json_encode($result);
+//print_r($result[0]);
+/* echo $submodels;
+echo $hotspots; */
 //$res = json_encode($result,JSON_PRETTY_PRINT);
 
 //$unitMeas = $res->unitaDiMisura;
@@ -58,8 +84,8 @@ $result = $sparql->query($query);
 
 // echo $res;
 
-foreach ($result as $row) {
+/* foreach ($result as $row) {
 echo "<li>"."$row->URI "." $row->unitaDiMisura "." $row->hasSubModels</li>\n";
-}
+} */
 //var_dump($result);
    ?>
