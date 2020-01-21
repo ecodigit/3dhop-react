@@ -60,11 +60,9 @@ if ($hasHotspot==true) {
   '?hotspot dc:relation ?object .'.
   'OPTIONAL {?object dc:title ?titolo .}'.
   'OPTIONAL {?object l0:description ?descrizione .}'.
-  /* SELECT DISTINCT ?tipoHotspot WHERE { 
-    ?model <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .
-    ?hotspot a ?tipoHotspot .
-    FILTER (?model=<'.$url.'>) 
-  }*/
+  '?model <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .'.
+  '?hotspot a ?tipoHotspot .'.
+  'FILTER (?model=<'.$url.'>) '.
   '}';
   $hotspots = $sparql->query($query_hs);
 } else {
