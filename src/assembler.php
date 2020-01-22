@@ -46,13 +46,26 @@ $html='
   <img id="light_on"    title="Disable Light Control"  src="3DHOP/minimal/skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="light"       title="Enable Light Control"   src="3DHOP/minimal/skins/dark/lightcontrol.png"/><br/>
 <!--LIGHT-->
+';
 
-<!--BOTTONE HOTSPOT-->
+
+
+
+
+if ($hasHotspot == 'true') {
+$html.=
+'<!--BOTTONE HOTSPOT-->
  <img id="hotspot_on" title="Hide Hotspots"         src="3DHOP/minimal/skins/dark/pin_on.png"          style="position:absolute; visibility:hidden;"/>
-  <img id="hotspot"    title="Show Hotspots"         src="3DHOP/minimal/skins/dark/pin.png"             /><br/>
-<!--BOTTONE HOTSPO -->
+<img id="hotspot"    title="Show Hotspots"         src="3DHOP/minimal/skins/dark/pin.png"             /><br/>
+<!--BOTTONE HOTSPOT -->';
+}
 
-<!--MEASURE-->
+
+
+
+
+$html.=
+'<!--MEASURE-->
   <img id="measure_on"  title="Disable Measure Tool"   src="3DHOP/minimal/skins/dark/measure_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="measure"     title="Enable Measure Tool"    src="3DHOP/minimal/skins/dark/measure.png"/><br/>
 <!--MEASURE-->
@@ -125,7 +138,7 @@ function setup3dhop() {
 	presenter.setScene({
 		meshes: {
 			"mesh_1" : { url: "'.$model.'" },
-//			"mesh_2" : { url: "models/Porta_Latina_e.nxz" },
+//			"mesh_2" : { url: "submodel1.nxz" },
 //			"hs_1" : { url: "models/sfera1.ply" },
 		},
 		modelInstances : {
@@ -160,12 +173,26 @@ function setup3dhop() {
 				minMaxDist: [0.5, 3.0]
 			}
 		}
-	});
+	});';
 
- // parametrizzare per HOTSPOT
+
+
+
+
+if ($hasHotspot == 'true') {
+$html.= 
+ '//--HOTSPOT--
 	presenter.setSpotVisibility(HOP_ALL, false, true);
+	presenter._onPickedSpot = onPickedSpot;
+  //--HOTSPOT--';
+}
 
-//--MEASURE--
+
+
+
+
+$html.=
+'//--MEASURE--
 	presenter._onEndMeasurement = onEndMeasure;
 //--MEASURE--
 
@@ -176,17 +203,29 @@ function setup3dhop() {
 //--SECTIONS--
 	sectiontoolInit();
 //--SECTIONS--
-}
+}';
 
-//--HOTSPOT--
+
+
+
+
+if ($hasHotspot == 'true') {
+$html.=
+'//--HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
      case \'mesh_2\'   : alert("Hotspot Clicked"); break;
   }
 }
-//--HOTSPOT--
+//--HOTSPOT--';
+}
 
-function actionsToolbar(action) {
+
+
+
+
+$html.=
+'function actionsToolbar(action) {
 	if(action==\'home\') presenter.resetTrackball();
 //--FULLSCREEN--
 	else if(action==\'full\'  || action==\'full_on\') fullscreenSwitch();
@@ -215,15 +254,24 @@ function actionsToolbar(action) {
 //--POINT PICKING--
 //--SECTIONS--
 	else if(action==\'sections\' || action==\'sections_on\') { sectiontoolReset(); sectiontoolSwitch(); }
-//--SECTIONS--
+//--SECTIONS--';
 
 
-//--HOTSPOT--
+
+
+
+if ($hasHotspot == 'true') {
+$html.=
+'//--HOTSPOT--
 else if(action==\'hotspot\'|| action==\'hotspot_on\') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
-//--HOTSPOT--
-
-
+//--HOTSPOT--';
 }
+
+
+
+
+
+$html.='}
 
 //--MEASURE--
 function onEndMeasure(measure) {
