@@ -54,10 +54,14 @@ $html='
 
 if ($hasHotspot == 'true') {
 $html.=
-'<!--BOTTONE HOTSPOT-->
+'
+
+<!--BOTTONE HOTSPOT-->
  <img id="hotspot_on" title="Hide Hotspots"         src="3DHOP/minimal/skins/dark/pin_on.png"          style="position:absolute; visibility:hidden;"/>
 <img id="hotspot"    title="Show Hotspots"         src="3DHOP/minimal/skins/dark/pin.png"             /><br/>
-<!--BOTTONE HOTSPOT -->';
+<!--BOTTONE HOTSPOT -->
+
+';
 }
 
 
@@ -181,10 +185,14 @@ function setup3dhop() {
 
 if ($hasHotspot == 'true') {
 $html.= 
- '//--HOTSPOT--
+ '
+
+ //--HOTSPOT--
 	presenter.setSpotVisibility(HOP_ALL, false, true);
 	presenter._onPickedSpot = onPickedSpot;
-  //--HOTSPOT--';
+  //--HOTSPOT--
+
+  ';
 }
 
 
@@ -211,13 +219,17 @@ $html.=
 
 if ($hasHotspot == 'true') {
 $html.=
-'//--HOTSPOT--
+'
+
+//--HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
      case \'mesh_2\'   : alert("Hotspot Clicked"); break;
   }
 }
-//--HOTSPOT--';
+//--HOTSPOT--
+
+';
 }
 
 
@@ -225,7 +237,9 @@ function onPickedSpot(id) {
 
 
 $html.=
-'function actionsToolbar(action) {
+'}
+
+function actionsToolbar(action) {
 	if(action==\'home\') presenter.resetTrackball();
 //--FULLSCREEN--
 	else if(action==\'full\'  || action==\'full_on\') fullscreenSwitch();
@@ -262,9 +276,13 @@ $html.=
 
 if ($hasHotspot == 'true') {
 $html.=
-'//--HOTSPOT--
+'
+
+//--HOTSPOT--
 else if(action==\'hotspot\'|| action==\'hotspot_on\') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
-//--HOTSPOT--';
+//--HOTSPOT--
+
+';
 }
 
 
