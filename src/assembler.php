@@ -1,7 +1,6 @@
 <?php
 
-
-include 'gatherer.php';
+include 'gatherer.php'; 
 
 
 $html='
@@ -127,7 +126,7 @@ function setup3dhop() {
 		meshes: {
 			"mesh_1" : { url: "'.$model.'" },
 //			"mesh_2" : { url: "models/Porta_Latina_e.nxz" },
-			"hs_1" : { url: "models/sfera1.ply" },
+//			"hs_1" : { url: "models/sfera1.ply" },
 		},
 		modelInstances : {
 			"model_1" : {
@@ -251,6 +250,7 @@ $(document).ready(function(){
 });
 </script>
 </html>';
+
 
 echo $html;
 

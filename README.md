@@ -21,7 +21,7 @@ Start container:
 ### Versione base (modello singolo)
 
 - [X] *gatherer.php*: php per interrogare lo SPARQL-Endopoint ed ottenere i metadati utili al visualizzatore
-- [x] Generazione dinamica della pagina per modelli singoli
+- [x] *assembler.php*: generazione dinamica della pagina per modelli singoli
 - [x] Generazione dinamica con unità di misura
 - [x] Generazione dinamica con tutte le funzioni attivate
 

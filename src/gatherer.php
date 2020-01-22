@@ -34,10 +34,13 @@
 
 
 $result = $sparql->query($query);
-$model=$result[0]->URI;
-$unitMeas = $result[0]->unitaDiMisura;
-$hasSubmodel = $result[0]->hasSubModels;
-$hasHotspot = $result[0]->hasHotspots;
+
+foreach ($result as $row) {
+	$model = $row->URI;
+	$unitMeas = $row->unitaDiMisura;
+	$hasSubmodel = $row->hasSubModels;
+	$hasHotspot = $row->hasHotspots;
+}
 
 if ($hasSubmodel==true) {
   $query_sm =
@@ -68,6 +71,4 @@ if ($hasHotspot==true) {
 } else {
   $hotspots = "There are no Hot spots!";
 }
-
-
-   ?>
+?>
