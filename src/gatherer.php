@@ -42,7 +42,7 @@ foreach ($result as $row) {
 	$hasHotspot = $row->hasHotspots;
 }
 
-if ($hasSubmodel==true) {
+/* if ($hasSubmodel==true) {
   $query_sm =
   'PREFIX ve: <https://w3id.org/ecodigit/ontology/virtualEnvironments/>'.
   'SELECT DISTINCT ?url  WHERE {'.
@@ -70,5 +70,5 @@ if ($hasHotspot==true) {
   $hotspots = $sparql->query($query_hs);
 } else {
   $hotspots = "There are no Hot spots!";
-}
+} */
 ?>
