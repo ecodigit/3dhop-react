@@ -29,8 +29,7 @@
 
 	<!-- Inserire un ID univoco -->
 
-	<rdf:Description
-		rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina">
+	<rdf:Description rdf:about="https://w3id.org/ecodigit/object/saccone/porta_latina_shp">
 
 		<rdf:type>
 			<rdf:Description
@@ -41,14 +40,13 @@
 
 		<rdf:type>
 			<rdf:Description
-				rdf:about="https://w3id.org/ecodigit/ontology/virtualEnvironments/GEO-OBJ">
-				<rdfs:label xml:lang="it">GEO-OBJ</rdfs:label>
+				rdf:about="https://w3id.org/ecodigit/ontology/virtualEnvironments/GeographicalObject">
+				<rdfs:label xml:lang="it">Geographical Object</rdfs:label>
 			</rdf:Description>
 		</rdf:type>
 
 		
-				<rdf:type
-			rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
+		<rdf:type rdf:resource="https://w3id.org/ecodigit/resource/Ricostruzioni_3d_di_ambienti_virtuali" />
 
 		<!-- Inserire identificativo univoco del GEO-DATO -->
 		<!-- <dc:identifier><![CDATA[${idModello}]]></dc:identifier> -->
@@ -58,17 +56,17 @@
 		<dc:title><![CDATA[Porta Latina]]></dc:title>
 
 		<!-- (Se disponibile) Inserire una descrizione del GEO-DATO in lingua inglese -->
-		<dc:description xml:lang="en"><![CDATA[integrated 3D survey model, made by photogrammetry, laser scanner and topography. The model show Porta Latina one of the ancient doors of Arelian Walls in Rome]]></dc:description>
+		<!-- <dc:description xml:lang="en"><![CDATA[integrated 3D survey model, made by photogrammetry, laser scanner and topography. The model show Porta Latina one of the ancient doors of Arelian Walls in Rome]]></dc:description> -->
 
 		<!-- (Se disponibile) Inserire una descrizione del GEO-DATO in lingua italiana -->
-		<dc:description xml:lang="it"><![CDATA[modello 3d di rilievo, realizzato con tecniche di rilievo integrato, fotogrammetrico, laser scanner e topografico, del complesso di Porta Latina, appartenente al circuito delle mura Aureliane in Roma.]]></dc:description>
+		<!-- <dc:description xml:lang="it"><![CDATA[modello 3d di rilievo, realizzato con tecniche di rilievo integrato, fotogrammetrico, laser scanner e topografico, del complesso di Porta Latina, appartenente al circuito delle mura Aureliane in Roma.]]></dc:description> -->
 
 		<!-- Inserire anno di creazione del GEO-DATO -->
 		<dc:date>2019</dc:date>
 
 		<!-- Inserire lista di autori in formato stringa -->
 		<!-- DA MAIL: nome di chi ha sviluppato il GEO-DATO -->
-		<dc:creator><![CDATA[Mauro Saccone, Marco Canciani, Manuela Michelini}]]></dc:creator>
+		<dc:creator><![CDATA[Mauro Saccone, Marco Canciani, Manuela Michelini]]></dc:creator>
 
 		<!-- Possibilmente fornire gli autori in forma strutturata com segue per 
 			migliorare la possibilità di fare alcune interrogazioni (e.g. dammi tutti 
@@ -172,8 +170,6 @@
 
 
 		<!-- Informazioni di Licenza -->
-		<!-- <dcterms:license
-			rdf:resource="${URL al documento descrittivo della licenza}" /> -->
 
 
 		<!-- DA MAIL nome del progetto per il quale è stato prodotto il GEO-DATO -->
@@ -191,13 +187,9 @@
 
 		<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/geoObj/MURA_AURELIANE.SHP]]></SM:URL>
 
-		<!--<SM:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"><![CDATA[http://150.146.207.67/geodati/MURA_AURELIANE.KML]]></SM:URL>-->
-
-
 		<!-- Keyword -->
 		<prism:keyword xml:lang="english"><![CDATA[photogrammetry]]></prism:keyword>
 		<prism:keyword xml:lang="english"><![CDATA[Cultural Heritage]]></prism:keyword>
-		<prism:keyword xml:lang="english"><![CDATA[3D models]]></prism:keyword>
 		<prism:keyword xml:lang="english"><![CDATA[Aurelian Walls]]></prism:keyword>
 		<prism:keyword xml:lang="english"><![CDATA[Porta Latina]]></prism:keyword>
 
@@ -208,10 +200,7 @@
 		<dcterms:relation rdf:resource="https://w3id.org/ecodigit/work/Esposito2017Le"/>
 		<dcterms:relation rdf:resource="https://w3id.org/ecodigit/work/Canciani2017Le"/>
 		<dcterms:relation rdf:resource="https://w3id.org/ecodigit/object/saccone/porta_latina"/> 
-
-
-		<!-- Categorie EcoDigit https://github.com/ecodigit/workspace/tree/master/ontology 
-		<dcterms:subject rdf:resource="${uriCategoria}" />-->
+		
 		<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Ingegneria_civile_e_Architettura" />
 		<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Modellazione_3d" />
 		<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/Modelli" />
@@ -230,65 +219,6 @@
 		<dcterms:subject rdf:resource="https://w3id.org/ecodigit/resource/STORIA_ROMANA" />
 
 
-
-
-		<!-- ha modelli legati: "true" se ha modelli legati, "false" altrimenti -->
-		<ve:containsSubModel>true</ve:containsSubModel>
-
-
-
-
-
-		<!-- contiene hotspot o features: "true" se ha features/hotspot, "false" 
-			altrimenti -->
-		<ve:containsHotspot>true</ve:containsHotspot>
-
-		<!-- Per ogni feature/hotspot copiare il blocco <hasHotspot></hasHotspot> -->
-		<ve:hasHotspot>
-			<ve:Hotspot>
-				<!-- nome -->
-				<l0:name>iconografia storica</l0:name>
-				<!-- identificativo -->
-				<ve:hotspotIdentifier>spot</ve:hotspotIdentifier>
-				
-				<!-- element con cui è relezionato l'hotspot (con metadati) -->
-				<dc:relation>
-					<rdf:Description rdf:about="https://w3id.org/ecodigit/resource/MuraAureliane_IconografiaStorica">
-						<dc:title><![CDATA[L'iconografia storica]]></dc:title>
-						<l0:description>Numerose sono le rappresentazioni della porta Latina che descrivono le diverse fasi di vita del monumento, qui sono riportate alcune viste dall'esterno delle Mura Aureliane</l0:description>
-						<!-- inserire il tipo -->
-						<!-- Per oggetto ${tipoFeature}=http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object -->
-						<!-- Per pubblicazione ${tipoFeature}=http://purl.org/spar/fabio/Work -->
-						<!-- Per organizzazione ${tipoFeature}=http://www.w3.org/ns/org#Organization -->
-					
-						<rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object" />
-						<!-- Eventualmente altri campi o anche altri tipi -->
-					</rdf:Description>
-				</dc:relation>
-
-				<!-- SOLO URL a oggetto in relazione con l'hotspot -->
-			<!-- 	<dcterms:relation
-					rdf:resource="${URI Metadati dell'oggetto con cui è in relazione}">
-				</dcterms:relation>
- -->
-			</ve:Hotspot>
-		</ve:hasHotspot>
-
-<!-- - Metadati relativi alla visutalizazione 
-1) SE HAI PREVISTO ALCUNE CATEGORIE PER LA VISUALIZZAZIONE LA RIGA 288 VA BENE???
-2) impostare LIVELLO DI ZOOM 
-3) impostare coordinate del centro 
--->
-		<!-- - Metadati relativi alla visutalizazione -->
-		<ve:hasVisualization>
-			<ve:Visualization
-				rdf:about="https://w3id.org/ecodigit/object/saccone/GEO-OBJ/MURAvisualizzazione1">
-
-
-			</ve:Visualization>
-		</ve:hasVisualization>
- 
- 
  
 
 	</rdf:Description>
