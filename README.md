@@ -24,6 +24,7 @@ Start container:
 - [x] *assembler.php*: generazione dinamica della pagina per modelli singoli
 - [x] Generazione dinamica con unità di misura
 - [x] Generazione dinamica con tutte le funzioni attivate
+- [X] Generazione dinamica della funzione Hotspot
 
 ### Versione completa (*N* modelli e *K* hotspot)
 
