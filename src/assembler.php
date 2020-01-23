@@ -3,8 +3,8 @@
 include 'gatherer.php'; 
 
 
-$html='
-<!DOCTYPE>
+$html=
+'<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta content="charset=UTF-8"/>
@@ -150,7 +150,7 @@ function setup3dhop() {
 
 if ($hasHotspot == 'true') {
 	$html.= '
-			"hs_1" : { url: "models/sfera1.ply" },
+			"hs_1" : { url: "http://150.146.207.67/3dhop-react/models/sfera1.ply" },
 			';
 }
 
