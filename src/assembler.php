@@ -129,7 +129,7 @@ $html.=
  </div>
 <!--SECTIONS-->
 
- <canvas id="draw-canvas" style="background-image: url(3DHOP/minimal/skins/backgrounds/light.jpg)"/>
+ <canvas id="draw-canvas" style="background-image: url(3DHOP/minimal/skins/backgrounds/light_ecodigit.jpg)"/>
 </div>
 </body>
 
