@@ -1,9 +1,5 @@
-<?php
-
-include 'gatherer.php'; 
 
 
-$html='
 <!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -46,30 +42,10 @@ $html='
   <img id="light_on"    title="Disable Light Control"  src="3DHOP/minimal/skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="light"       title="Enable Light Control"   src="3DHOP/minimal/skins/dark/lightcontrol.png"/><br/>
 <!--LIGHT-->
-';
-
-
-
-
-
-if ($hasHotspot == 'true') {
-$html.=
-'
-
 <!--BOTTONE HOTSPOT-->
  <img id="hotspot_on" title="Hide Hotspots"         src="3DHOP/minimal/skins/dark/pin_on.png"          style="position:absolute; visibility:hidden;"/>
 <img id="hotspot"    title="Show Hotspots"         src="3DHOP/minimal/skins/dark/pin.png"             /><br/>
-<!--BOTTONE HOTSPOT -->
-
-';
-}
-
-
-
-
-
-$html.=
-'<!--MEASURE-->
+<!--BOTTONE HOTSPOT --><!--MEASURE-->
   <img id="measure_on"  title="Disable Measure Tool"   src="3DHOP/minimal/skins/dark/measure_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="measure"     title="Enable Measure Tool"    src="3DHOP/minimal/skins/dark/measure.png"/><br/>
 <!--MEASURE-->
@@ -133,9 +109,6 @@ $html.=
 </div>
 </body>
 
-
-
-
 <script type="text/javascript">
 var presenter = null;
 
@@ -144,7 +117,7 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "'.$model.'" },
+			"mesh_1" : { url: "models/Porta_Latina_e.nxz" },
 //			"mesh_2" : { url: "submodel1.nxz" },
 			"hs_1" : { url: "models/sfera1.ply" },
 		},
@@ -180,30 +153,14 @@ function setup3dhop() {
 				minMaxDist: [0.5, 3.0]
 			}
 		}
-	});';
-
-
-
-
-
-if ($hasHotspot == 'true') {
-$html.= 
- '
+	});
 
 //--HOTSPOT--
 	presenter.setSpotVisibility(HOP_ALL, false, true);
 	presenter._onPickedSpot = onPickedSpot;
 //--HOTSPOT--
 
-  ';
-}
-
-
-
-
-
-$html.=
-'//--MEASURE--
+//--MEASURE--
 	presenter._onEndMeasurement = onEndMeasure;
 //--MEASURE--
 
@@ -214,95 +171,56 @@ $html.=
 //--SECTIONS--
 	sectiontoolInit();
 //--SECTIONS--
-}';
-
-
-
-
-
-if ($hasHotspot == 'true') {
-$html.=
-'
+}
 
 //--HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
-     case \'hs_1\'   : alert("Hotspot Clicked"); break;
+     case 'hs_1'   : alert("Hotspot Clicked"); break;
   }
 }
 //--HOTSPOT--
 
-';
-}
-
-
-
-
-
-$html.=
-'
-
 function actionsToolbar(action) {
-	if(action==\'home\') presenter.resetTrackball();
+	if(action=='home') presenter.resetTrackball();
 //--FULLSCREEN--
-	else if(action==\'full\'  || action==\'full_on\') fullscreenSwitch();
+	else if(action=='full'  || action=='full_on') fullscreenSwitch();
 //--FULLSCREEN--
 //--ZOOM--
-	else if(action==\'zoomin\') presenter.zoomIn();
-	else if(action==\'zoomout\') presenter.zoomOut();
+	else if(action=='zoomin') presenter.zoomIn();
+	else if(action=='zoomout') presenter.zoomOut();
 //--ZOOM--
 //--LIGHTING--
-	else if(action==\'lighting\' || action==\'lighting_off\') { presenter.enableSceneLighting(!presenter.isSceneLightingEnabled()); lightingSwitch(); }
+	else if(action=='lighting' || action=='lighting_off') { presenter.enableSceneLighting(!presenter.isSceneLightingEnabled()); lightingSwitch(); }
 //--LIGHTING--
 //--LIGHT--
-	else if(action==\'light\' || action==\'light_on\') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--CAMERA--
-	else if(action==\'perspective\' || action==\'orthographic\') { presenter.toggleCameraType(); cameraSwitch(); }
+	else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
 //--COLOR--
-	else if(action==\'color\' || action==\'color_on\') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
+	else if(action=='color' || action=='color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
 //--COLOR--
 //--MEASURE--
-	else if(action==\'measure\' || action==\'measure_on\') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
+	else if(action=='measure' || action=='measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
 //--MEASURE--
 //--POINT PICKING--
-	else if(action==\'pick\' || action==\'pick_on\') { presenter.enablePickpointMode(!presenter.isPickpointModeEnabled()); pickpointSwitch(); }
+	else if(action=='pick' || action=='pick_on') { presenter.enablePickpointMode(!presenter.isPickpointModeEnabled()); pickpointSwitch(); }
 //--POINT PICKING--
 //--SECTIONS--
-	else if(action==\'sections\' || action==\'sections_on\') { sectiontoolReset(); sectiontoolSwitch(); }
-//--SECTIONS--';
-
-
-
-
-
-if ($hasHotspot == 'true') {
-$html.=
-'
+	else if(action=='sections' || action=='sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
+//--SECTIONS--
 
 //--HOTSPOT--
-else if(action==\'hotspot\'|| action==\'hotspot_on\') { 
-	presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); 
-}
-//--HOTSPOT--
-
-';
-}
-
-
-
-
-
-$html.=
-'
-}
+else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
+//--HOTSPOT--}
 
 //--MEASURE--
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$(\'#measure-output\').html(measure.toFixed(2) + " " + "'.$unitMeas.'");
+	$('#measure-output').html(measure.toFixed(2) + " " + "m");
 }
 //--MEASURE--
 
@@ -312,7 +230,7 @@ function onEndPick(point) {
 	var x = point[0].toFixed(2);
 	var y = point[1].toFixed(2);
 	var z = point[2].toFixed(2);
-    $(\'#pickpoint-output\').html("[ "+x+" , "+y+" , "+z+" ]");
+    $('#pickpoint-output').html("[ "+x+" , "+y+" , "+z+" ]");
 }
 //--PICKPOINT--
 
@@ -321,12 +239,6 @@ $(document).ready(function(){
 
 	setup3dhop();
 });
-
 </script>
-</html>';
-
-
-echo $html;
-
-?>
+</html>
 
