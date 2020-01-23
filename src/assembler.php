@@ -146,7 +146,15 @@ function setup3dhop() {
 		meshes: {
 			"mesh_1" : { url: "'.$model.'" },
 //			"mesh_2" : { url: "submodel1.nxz" },
+';
+
+if ($hasHotspot == 'true') {
+	$html.= '
 			"hs_1" : { url: "models/sfera1.ply" },
+			';
+}
+
+$html.='	
 		},
 		modelInstances : {
 			"model_1" : {
@@ -157,7 +165,10 @@ function setup3dhop() {
 //				mesh  : "mesh_2",
 //				color : [0.8, 0.7, 0.75]
 //			}
-		},
+		},';
+
+if ($hasHotspot == 'true') {
+	$html.='
 		spots : {
 			"hs_1" : {
 				mesh : "hs_1",
@@ -168,7 +179,11 @@ function setup3dhop() {
 					color: [1, 0.5, 0.5],
 					alpha: 0.5
 				}
-		},
+		},';
+	}
+
+
+$html.='
 		trackball: {
 			type : TurntablePanTrackball,
 			trackOptions : {
