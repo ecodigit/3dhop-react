@@ -2,10 +2,9 @@
 
 include 'gatherer.php'; 
 
-//var_dump($submodels);
 
 
-$html=
+$html_1=
 '<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -49,28 +48,7 @@ $html=
   <img id="light"       title="Enable Light Control"   src="3DHOP/minimal/skins/dark/lightcontrol.png"/><br/>
 <!--LIGHT-->
 ';
-
-
-
-
-
-if ($hasHotspots == 'true') {
-$html.=
-'
-
-<!--BOTTONE HOTSPOT-->
- <img id="hotspot_on" title="Hide Hotspots"         src="3DHOP/minimal/skins/dark/pin_on.png"          style="position:absolute; visibility:hidden;"/>
-<img id="hotspot"    title="Show Hotspots"         src="3DHOP/minimal/skins/dark/pin.png"             /><br/>
-<!--BOTTONE HOTSPOT -->
-
-';
-}
-
-
-
-
-
-$html.=
+$html_2.=
 '<!--MEASURE-->
   <img id="measure_on"  title="Disable Measure Tool"   src="3DHOP/minimal/skins/dark/measure_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="measure"     title="Enable Measure Tool"    src="3DHOP/minimal/skins/dark/measure.png"/><br/>
@@ -146,161 +124,42 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "'.$model.'" },';
-
-if ($hasSubModels =='true') {
-	$i=2;
-	foreach ($submodels as $sm) {
-		$indirizzo=$sm->URL;
-		$html.='
-			"mesh_'.$i.'" : { url: "'.$indirizzo.'" },';
-		$i++;
-	}
-}
-
-if ($hasHotspots == 'true') {
-	$k=1;
-	foreach ($hotspots as $hs) {
-        $hstype=$hs->tipoHotspot;
-        switch ($hstype) {
-          case "https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere":
-            $type="sfera.ply";
-          break;
-          case "https://w3id.org/ecodigit/ontology/virtualEnvironments/Cube":
-            $type="cubo.ply";
-		  break;
-		}
-	$html.= '
-			"hs_'.$k.'" : { url: "http://150.146.207.67/3dhop-react/models/'.$type.'" },
-			';
-			$k++;
-		}
-}
-
-$html.='	
+            "mesh_1" : { url: "'.$model.'" },';
+$html_3.='	
 		},
 		modelInstances : {
 			"model_1" : {
 				mesh  : "mesh_1",
 				color : [0.8, 0.7, 0.75]
-			},';
-if ($hasSubModels =='true') {
-	$i=2;
-	foreach ($submodels as $sm) {
-		$indirizzo=$sm->URL;
-		$html.='
-			"model_'.$i.'" : {
-				mesh  : "mesh_'.$i.'",
-				color : [0.8, 0.7, 0.75]
-			},';
-		$i++;
-		}
-	}
-
-$html.='},';
-
-if ($hasHotspots == 'true') {
-	$html.='
-		spots : {';
-	foreach ($hotspots as $hs) {
-				$k=1;
-				$html.='
-			"hs_'.$k.'" : {
-				mesh : "hs_'.$k.'",
-					transform: {
-						matrix: SglMat4.mul(SglMat4.translation([0, 0, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
-					},
-					color: [1, 0.5, 0.5],
-					alpha: 0.5
-				}
-		},';
-		$k++;
-	}
-}
-
-
-$html.='
-		trackball: {
-			type : TurntablePanTrackball,
-			trackOptions : {
-				startPhi: 35.0,
-				startTheta: 15.0,
-				startDistance: 2.5,
-				minMaxPhi: [-180, 180],
-				minMaxTheta: [-180.0, 180.0],
-				minMaxDist: [0.5, 3.0]
-			}
-		}
-	});';
-
-
-
-
-
-if ($hasHotspots == 'true') {
-$html.= 
- '
-
-//--HOTSPOT--
-	presenter.setSpotVisibility(HOP_ALL, false, true);
-	presenter._onPickedSpot = onPickedSpot;
-//--HOTSPOT--
-
-  ';
-}
-
-
-
-
-
-$html.=
+            },';
+$html_4.='},';
+$html_5.='
+            trackball: {
+                type : TurntablePanTrackball,
+                trackOptions : {
+                    startPhi: 35.0,
+                    startTheta: 15.0,
+                    startDistance: 2.5,
+                    minMaxPhi: [-180, 180],
+                    minMaxTheta: [-180.0, 180.0],
+                    minMaxDist: [0.5, 3.0]
+                }
+            }
+        });';
+$html_6.=
 '//--MEASURE--
-	presenter._onEndMeasurement = onEndMeasure;
+  presenter._onEndMeasurement = onEndMeasure;
 //--MEASURE--
-
+        
 //--POINT PICKING--
-	presenter._onEndPickingPoint = onEndPick;
+  presenter._onEndPickingPoint = onEndPick;
 //--POINT PICKING--
-
+        
 //--SECTIONS--
-	sectiontoolInit();
+  sectiontoolInit();
 //--SECTIONS--
 }';
-
-
-
-
-
-if ($hasHotspots == 'true') {
-$html.=
-'
-
-//--HOTSPOT--
-function onPickedSpot(id) {
-  switch(id) {
-	  ';
-	$k=1;
-	foreach ($hotspots as $hs) {
-        $title=$hs->titolo;
-        $description=$hs->descrizione;
-
-
-	$html.=' case \'hs_'.$k.'\'   : alert("'.$description.'"); break;
-	';
-	$k++;
-	}
-  $html.='}
-}
-//--HOTSPOT--
-
-';
-}
-
-
-
-
-
-$html.=
+$html_7.=
 '
 
 function actionsToolbar(action) {
@@ -333,29 +192,7 @@ function actionsToolbar(action) {
 //--SECTIONS--
 	else if(action==\'sections\' || action==\'sections_on\') { sectiontoolReset(); sectiontoolSwitch(); }
 //--SECTIONS--';
-
-
-
-
-
-if ($hasHotspots == 'true') {
-$html.=
-'
-
-//--HOTSPOT--
-else if(action==\'hotspot\'|| action==\'hotspot_on\') { 
-	presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); 
-}
-//--HOTSPOT--
-
-';
-}
-
-
-
-
-
-$html.=
+$html_8.=
 '
 }
 
@@ -386,6 +223,118 @@ $(document).ready(function(){
 </script>
 </html>';
 
+
+if ($hasHotspots == 'true') {
+$html_HS1.=
+'
+
+<!--BOTTONE HOTSPOT-->
+ <img id="hotspot_on" title="Hide Hotspots"         src="3DHOP/minimal/skins/dark/pin_on.png"          style="position:absolute; visibility:hidden;"/>
+<img id="hotspot"    title="Show Hotspots"         src="3DHOP/minimal/skins/dark/pin.png"             /><br/>
+<!--BOTTONE HOTSPOT -->
+
+';
+$k=1;
+foreach ($hotspots as $hs) {
+    $title=$hs->titolo;
+    $description=$hs->descrizione;
+    $hstype=$hs->tipoHotspot;
+    switch ($hstype) {
+      case "https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere":
+        $type="sfera.ply";
+      break;
+      case "https://w3id.org/ecodigit/ontology/virtualEnvironments/Cube":
+        $type="cubo.ply";
+      break;
+    }
+    $html_HS2.= '
+        "hs_'.$k.'" : { url: "http://150.146.207.67/3dhop-react/models/'.$type.'" },
+        ';
+    $html_HS4.='
+			"hs_'.$k.'" : {
+				mesh : "hs_'.$k.'",
+					transform: {
+						matrix: SglMat4.mul(SglMat4.translation([0, 0, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
+					},
+					color: [1, 0.5, 0.5],
+					alpha: 0.5
+				}
+        },';
+	$html_HS7.=' case \'hs_'.$k.'\'   : alert("'.$description.'"); break;
+	';
+    $k++;
+    }
+$html_HS3.='
+        spots : {';
+$html_HS5.= 
+'
+           
+//--HOTSPOT--
+    presenter.setSpotVisibility(HOP_ALL, false, true);
+    presenter._onPickedSpot = onPickedSpot;
+    //--HOTSPOT--
+           
+';
+$html_HS6.=
+'
+
+//--HOTSPOT--
+function onPickedSpot(id) {
+  switch(id) {
+      ';
+$html_HS8.='}
+    }
+    //--HOTSPOT--
+    
+    ';
+$html_HS9.=
+    '
+    
+    //--HOTSPOT--
+    else if(action==\'hotspot\'|| action==\'hotspot_on\') { 
+        presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); 
+    }
+    //--HOTSPOT--
+    
+    ';
+}
+
+
+if ($hasSubModels =='true') {
+	$i=2;
+	foreach ($submodels as $sm) {
+		$indirizzo=$sm->URL;
+		$html_SM1.='
+            "mesh_'.$i.'" : { url: "'.$indirizzo.'" },';
+        $html_SM2.='
+                    "model_'.$i.'" : {
+                        mesh  : "mesh_'.$i.'",
+                        color : [0.8, 0.7, 0.75]
+                    },';
+		$i++;
+    }
+}
+
+
+
+if ($hasHotspots == 'true' && $hasSubModels =='false') {
+    $html=$html_1.$html_HS1.$html_2.$html_HS2.$html_3.$html_4.$html_HS3.$html_HS4.$html_5.$html_HS5.$html_6.$html_HS6.$html_HS7.$html_HS8.$html_7.$html_HS9.$html_8;
+}
+
+
+if ($hasHotspots == 'false' && $hasSubModels =='true') {
+    $html=$html_1.$html_2.$html_SM1.$html_3.$html_SM2.$html_4.$html_5.$html_6.$html_7.$html_8;
+}
+
+
+if ($hasHotspots == 'true' && $hasSubModels =='true') {
+    $html=$html_1.$html_HS1.$html_2.$html_SM1.$html_HS2.$html_3.$html_SM2.$html_4.$html_HS3.$html_HS4.$html_5.$html_HS5.$html_6.$html_HS6.$html_HS7.$html_HS8.$html_7.$html_HS9.$html_8;
+}
+
+
+if ($hasHotspots == 'false' && $hasSubModels =='false') {
+    $html=$html_1.$html_2.$html_3.$html_4.$html_5.$html_6.$html_7.$html_8;
+}
 
 echo $html;
 
