@@ -24,12 +24,11 @@ Start container:
 - [x] *assembler.php*: generazione dinamica della pagina per modelli singoli
 - [x] Generazione dinamica con unità di misura
 - [x] Generazione dinamica con tutte le funzioni attivate
-- [X] Generazione dinamica della funzione Hotspot
 
 ### Versione completa (*N* modelli e *K* hotspot)
 
 - [ ] *gatherer.php* per *N* modelli (richiama i sottomodelli)
-- [ ] *gatherer.php* per *K* hotspot (richiama gli titoli e descrizioni per ogni hotspot)
+- [X] *gatherer.php* per *K* hotspot (richiama gli titoli e descrizioni per ogni hotspot)
 - [ ] Generazione dinamica della pagina per modelli costituiti da *N* sottomodelli
-- [ ] Generazione dinamica di *K* hotspot
-- [ ] Generazione dinamica con selezione delle funzioni attivate
+- [X] Generazione dinamica di *K* hotspot
+- [X] Generazione dinamica con selezione delle funzioni attivate

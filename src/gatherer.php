@@ -38,37 +38,36 @@ $result = $sparql->query($query);
 foreach ($result as $row) {
 	$model = $row->URI;
 	$unitMeas = $row->unitaDiMisura;
-	$hasSubmodel = $row->hasSubModels;
-	$hasHotspot = $row->hasHotspots;
+	$hasSubmodels = $row->hasSubModels;
+	$hasHotspots = $row->hasHotspots;
 }
 
-/* if ($hasSubmodel==true) {
+if ($hasSubModels == 'true') {
   $query_sm =
-  'PREFIX ve: <https://w3id.org/ecodigit/ontology/virtualEnvironments/>'.
-  'SELECT DISTINCT ?url  WHERE {'.
-    '<'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasSubModel> ?submodel .'.
-    '?submodel <https://w3id.org/italia/onto/SM/URL> ?url .'.
-  '}';
-  $submodels = $sparql->query($query_sm);
-} else {
-  $submodels = "There are no Sub models!";
-}
+ 'PREFIX ve: <https://w3id.org/ecodigit/ontology/virtualEnvironments/>'.
+ 'SELECT DISTINCT ?URL WHERE {'.
+ '    <'.$uri.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasSubModel> ?SubModel .'.
+ '    ?SubModel <https://w3id.org/italia/onto/SM/URL> ?URL .'.
+ '}';
+  
+ $submodels = $sparql->query($query_sm); 
+}  
 
-if ($hasHotspot==true) {
-  $query_hs =
-  'PREFIX dc: <http://purl.org/dc/elements/1.1/>'.
-  'PREFIX l0: <https://w3id.org/italia/onto/l0/>'.
-  'SELECT DISTINCT ?titolo ?descrizione ?tipoHotspot WHERE {'.
-  '<'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .'.
-  '?hotspot dc:relation ?object .'.
-  'OPTIONAL {?object dc:title ?titolo .}'.
-  'OPTIONAL {?object l0:description ?descrizione .}'.
-  '?model <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .'.
-  '?hotspot a ?tipoHotspot .'.
-  'FILTER (?model=<'.$url.'>) '.
-  '}';
-  $hotspots = $sparql->query($query_hs);
-} else {
-  $hotspots = "There are no Hot spots!";
-} */
+
+if ($hasHotspots=="true") {
+ $query_hs =
+ 'PREFIX l0: <https://w3id.org/italia/onto/l0/>'.
+ 'PREFIX dc: <http://purl.org/dc/elements/1.1/>'.
+ 'SELECT DISTINCT ?n ?titolo ?descrizione ?tipoHotspot WHERE { '.
+ '  ?model <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasHotspot> ?hotspot .'.
+ '  ?hotspot l0:name ?n .'.
+ '  ?hotspot a ?tipoHotspot .'.
+ '  ?hotspot dc:relation ?object .'.
+ '  OPTIONAL {?object dc:title ?titolo .}'.
+ '  OPTIONAL {?object l0:description ?descrizione .}'.
+ '  FILTER (?model=<https://w3id.org/ecodigit/object/saccone/porta_latina>)'.
+ '  FILTER (?tipoHotspot!=<https://w3id.org/ecodigit/ontology/virtualEnvironments/Hotspot>)'.
+ '}';
+ $hotspots = $sparql->query($query_hs);
+}
 ?>

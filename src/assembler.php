@@ -3,6 +3,7 @@
 include 'gatherer.php'; 
 
 
+
 $html=
 '<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -52,7 +53,7 @@ $html=
 
 
 
-if ($hasHotspot == 'true') {
+if ($hasHotspots == 'true') {
 $html.=
 '
 
@@ -148,10 +149,23 @@ function setup3dhop() {
 //			"mesh_2" : { url: "submodel1.nxz" },
 ';
 
-if ($hasHotspot == 'true') {
+if ($hasHotspots == 'true') {
+	$k=1;
+	foreach ($hotspots as $hs) {
+        $hstype=$hs->tipoHotspot;
+        switch ($hstype) {
+          case "https://w3id.org/ecodigit/ontology/virtualEnvironments/Sphere":
+            $type="sfera.ply";
+          break;
+          case "https://w3id.org/ecodigit/ontology/virtualEnvironments/Cube":
+            $type="cubo.ply";
+		  break;
+		}
 	$html.= '
-			"hs_1" : { url: "http://150.146.207.67/3dhop-react/models/sfera1.ply" },
+			"hs_'.$k.'" : { url: "http://150.146.207.67/3dhop-react/models/'.$type.'" },
 			';
+			$k++;
+		}
 }
 
 $html.='	
@@ -167,20 +181,24 @@ $html.='
 //			}
 		},';
 
-if ($hasHotspot == 'true') {
+if ($hasHotspots == 'true') {
 	$html.='
-		spots : {
-			"hs_1" : {
-				mesh : "hs_1",
+		spots : {';
+	foreach ($hotspots as $hs) {
+				$k=1;
+				$html.='
+			"hs_'.$k.'" : {
+				mesh : "hs_'.$k.'",
 					transform: {
-						matrix: SglMat4.mul(SglMat4.translation([0, 0, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-
-							5.0), [0.0, 0.0, 1.0]))
+						matrix: SglMat4.mul(SglMat4.translation([0, 0, 0]), SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
 					},
 					color: [1, 0.5, 0.5],
 					alpha: 0.5
 				}
 		},';
+		$k++;
 	}
+}
 
 
 $html.='
@@ -201,7 +219,7 @@ $html.='
 
 
 
-if ($hasHotspot == 'true') {
+if ($hasHotspots == 'true') {
 $html.= 
  '
 
@@ -235,15 +253,25 @@ $html.=
 
 
 
-if ($hasHotspot == 'true') {
+if ($hasHotspots == 'true') {
 $html.=
 '
 
 //--HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
-     case \'hs_1\'   : alert("Hotspot Clicked"); break;
-  }
+	  ';
+	$k=1;
+	foreach ($hotspots as $hs) {
+        $title=$hs->titolo;
+        $description=$hs->descrizione;
+
+
+	$html.=' case \'hs_'.$k.'\'   : alert("'.$description.'"); break;
+	';
+	$k++;
+	}
+  $html.='}
 }
 //--HOTSPOT--
 
@@ -292,7 +320,7 @@ function actionsToolbar(action) {
 
 
 
-if ($hasHotspot == 'true') {
+if ($hasHotspots == 'true') {
 $html.=
 '
 
