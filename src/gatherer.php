@@ -38,7 +38,7 @@ $result = $sparql->query($query);
 foreach ($result as $row) {
 	$model = $row->URI;
 	$unitMeas = $row->unitaDiMisura;
-	$hasSubmodels = $row->hasSubModels;
+	$hasSubModels = $row->hasSubModels;
 	$hasHotspots = $row->hasHotspots;
 }
 
@@ -46,7 +46,7 @@ if ($hasSubModels == 'true') {
   $query_sm =
  'PREFIX ve: <https://w3id.org/ecodigit/ontology/virtualEnvironments/>'.
  'SELECT DISTINCT ?URL WHERE {'.
- '    <'.$uri.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasSubModel> ?SubModel .'.
+ '    <'.$url.'> <https://w3id.org/ecodigit/ontology/virtualEnvironments/hasSubModel> ?SubModel .'.
  '    ?SubModel <https://w3id.org/italia/onto/SM/URL> ?URL .'.
  '}';
   
@@ -65,7 +65,7 @@ if ($hasHotspots=="true") {
  '  ?hotspot dc:relation ?object .'.
  '  OPTIONAL {?object dc:title ?titolo .}'.
  '  OPTIONAL {?object l0:description ?descrizione .}'.
- '  FILTER (?model=<https://w3id.org/ecodigit/object/saccone/porta_latina>)'.
+ '  FILTER (?model=<'.$url.'>)'.
  '  FILTER (?tipoHotspot!=<https://w3id.org/ecodigit/ontology/virtualEnvironments/Hotspot>)'.
  '}';
  $hotspots = $sparql->query($query_hs);

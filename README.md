@@ -27,8 +27,8 @@ Start container:
 
 ### Versione completa (*N* modelli e *K* hotspot)
 
-- [ ] *gatherer.php* per *N* modelli (richiama i sottomodelli)
+- [X] *gatherer.php* per *N* modelli (richiama i sottomodelli)
 - [X] *gatherer.php* per *K* hotspot (richiama gli titoli e descrizioni per ogni hotspot)
-- [ ] Generazione dinamica della pagina per modelli costituiti da *N* sottomodelli
+- [X] Generazione dinamica della pagina per modelli costituiti da *N* sottomodelli
 - [X] Generazione dinamica di *K* hotspot
 - [X] Generazione dinamica con selezione delle funzioni attivate

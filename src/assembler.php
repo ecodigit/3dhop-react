@@ -2,6 +2,7 @@
 
 include 'gatherer.php'; 
 
+//var_dump($submodels);
 
 
 $html=
@@ -145,9 +146,17 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "'.$model.'" },
-//			"mesh_2" : { url: "submodel1.nxz" },
-';
+			"mesh_1" : { url: "'.$model.'" },';
+
+if ($hasSubModels =='true') {
+	$i=2;
+	foreach ($submodels as $sm) {
+		$indirizzo=$sm->URL;
+		$html.='
+			"mesh_'.$i.'" : { url: "'.$indirizzo.'" },';
+		$i++;
+	}
+}
 
 if ($hasHotspots == 'true') {
 	$k=1;
@@ -174,12 +183,21 @@ $html.='
 			"model_1" : {
 				mesh  : "mesh_1",
 				color : [0.8, 0.7, 0.75]
-			},
-//			"model_2" : {
-//				mesh  : "mesh_2",
-//				color : [0.8, 0.7, 0.75]
-//			}
-		},';
+			},';
+if ($hasSubModels =='true') {
+	$i=2;
+	foreach ($submodels as $sm) {
+		$indirizzo=$sm->URL;
+		$html.='
+			"model_'.$i.'" : {
+				mesh  : "mesh_'.$i.'",
+				color : [0.8, 0.7, 0.75]
+			},';
+		$i++;
+		}
+	}
+
+$html.='},';
 
 if ($hasHotspots == 'true') {
 	$html.='
